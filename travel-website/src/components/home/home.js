@@ -1,5 +1,4 @@
 import React from "react";
-import "./home.css";
 import NavBar from "../nav/nav";
 import SectionHero from "../section-Hero/section-Hero";
 import TopDestinations from "../top-destinations/top-destionations";

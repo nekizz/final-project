@@ -1,1 +1,1 @@
-package hotel
+package main

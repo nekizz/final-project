@@ -1,1 +1,4 @@
-package account
+package main
+
+func main() {
+}

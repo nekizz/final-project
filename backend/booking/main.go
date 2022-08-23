@@ -1,1 +1,1 @@
-package booking
+package main

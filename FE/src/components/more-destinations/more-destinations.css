@@ -1,0 +1,100 @@
+.more-destinations {
+    position: relative;
+    background: #fff;
+    padding-bottom: 100px;
+}
+
+.more-destinations__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 250px 200px 0 200px;
+
+}
+
+.more-destinations__top {
+    position: absolute;
+    top: 90px;
+    color: #0CA296;
+    font-family: "Allison Script";
+    font-weight: 400;
+    font-size: 200px;
+
+}
+
+.more-destinations__dest {
+    color: #000;
+    text-transform: lowercase;
+    font-size: 80px;
+    font-family: "Circular Std";
+}
+
+.more-destinations__desc {
+    font-family: "Circular Std";
+    color: #565656;
+    font-weight: 400;
+    line-height: 32px;
+    font-size: 26px;
+    text-align: center;
+    margin-top: 60px;
+}
+
+.more-destinations-container {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(3,1fr);
+    padding: 100px 70px 0 70px;
+    grid-auto-rows: 200px;
+}
+
+.more-destinations-container .france {
+    grid-row: 1/ 3 ;
+}
+
+.more-destinations-container .jamaica {
+    grid-column: 2/4;
+}
+
+.more-destinations-item {
+    position: relative;
+
+}
+
+.more-destinations-item__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+
+.more-destinations-info {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.jamaica .more-destinations-info,
+.france .more-destinations-info {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+
+.more-destinations-state {
+    color: #fff;
+    font-size: 30px;
+    font-family: "Circular Std";
+    text-align: center;
+}
+
+.more-destinations-city {
+    color: #fff;
+    font-size: 14px;
+    font-family: "Circular Std";
+    text-align: center;
+}

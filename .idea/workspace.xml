@@ -5,28 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="100561d0-3fc6-405d-9716-ed476036ccf1" name="Changes" comment="build base service">
-      <change afterPath="$PROJECT_DIR$/backend/account/go.mod" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/bill/cmd/grpc.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/bill/cmd/migrate.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/bill/cmd/migration.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/bill/cmd/rest.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/bill/cmd/root.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/bill/cmd/seed.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/bill/cmd/serve.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/final-project.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/account/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/backend/account/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/bill/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/backend/bill/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/booked-room/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/backend/booked-room/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/booking/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/backend/booking/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/hotel/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/backend/hotel/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/payment/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/backend/payment/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/room/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/backend/room/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/service/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/backend/service/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/used-service/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/backend/used-service/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/user/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/backend/user/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/account/cmd/migrate.go" beforeDir="false" afterPath="$PROJECT_DIR$/backend/account/cmd/migrate.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,19 +52,19 @@
     "configurable.GoLibrariesConfigurable.is.expanded": "true",
     "go.import.settings.migrated": "true",
     "go.sdk.automatically.set": "true",
-    "last_opened_file_path": "/home/n3kizz/Projects/go/src/github.com/n3kizz/final-project/backend/user/cmd",
+    "last_opened_file_path": "/home/n3kizz/Projects/go/src/github.com/n3kizz/final-project/backend/pbtype",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
-    "settings.editor.selected.configurable": "go.vgo"
+    "settings.editor.selected.configurable": "google.protobuf.language"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/backend/pbtype" />
       <recent name="$PROJECT_DIR$/backend/user/cmd" />
       <recent name="$PROJECT_DIR$/backend/used-service/cmd" />
       <recent name="$PROJECT_DIR$/backend/service/cmd" />
       <recent name="$PROJECT_DIR$/backend/room/cmd" />
-      <recent name="$PROJECT_DIR$/backend/payment/cmd" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/backend" />
@@ -134,5 +113,15 @@
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/backend/bill/main.go</url>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

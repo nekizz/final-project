@@ -15,7 +15,7 @@ import (
 
 var seedCmd = &cobra.Command{
 	Use:   "seed",
-	Short: "booked-room service seed command",
+	Short: "bookedroom service seed command",
 	Run:   runSeedCommand,
 }
 

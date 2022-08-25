@@ -20,7 +20,7 @@ import (
 
 var restCmd = &cobra.Command{
 	Use:   "rest",
-	Short: "booked-room service serve rest command",
+	Short: "bookedroom service serve rest command",
 	Run:   runRestCommand,
 }
 
@@ -67,18 +67,18 @@ func runRestCommand(cmd *cobra.Command, args []string) {
 	}()
 
 	logrus.WithFields(logrus.Fields{
-		"service": "booked-room-service",
+		"service": "bookedroom-service",
 		"type":    "rest",
-	}).Info("booked-room service server started")
+	}).Info("bookedroom service server started")
 
 	<-c
 	ctx, cancel := context.WithCancel(ctx)
 	defer cancel()
 
 	logrus.WithFields(logrus.Fields{
-		"service": "booked-room-service",
+		"service": "bookedroom-service",
 		"type":    "rest",
-	}).Info("booked-room service gracefully shutdowns")
+	}).Info("bookedroom service gracefully shutdowns")
 }
 
 func initializeGatewayService(ctx context.Context, gw *runtime.ServeMux, endpoint string, opts []grpc.DialOption) {

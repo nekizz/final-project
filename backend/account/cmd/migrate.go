@@ -2,6 +2,7 @@ package cmd
 
 import (
 	"fmt"
+	"github.com/dinhtp/lets-go-company/migration"
 	"gorm.io/gorm"
 	"os"
 	"time"
@@ -9,8 +10,6 @@ import (
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
 	"gorm.io/driver/mysql"
-
-	"github.com/dinhtp/lets-go-company/migration"
 )
 
 var migrateCmd = &cobra.Command{

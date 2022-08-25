@@ -15,7 +15,7 @@ import (
 
 var migrateCmd = &cobra.Command{
 	Use:   "migrate",
-	Short: "booked-room service migrate command",
+	Short: "bookedroom service migrate command",
 	Run:   runMigrationCommand,
 }
 

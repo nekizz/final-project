@@ -12,8 +12,8 @@ import (
 var cfgFile string
 
 var rootCmd = &cobra.Command{
-	Use:   "booked-room",
-	Short: "booked-room service root command",
+	Use:   "bookedroom",
+	Short: "bookedroom service root command",
 }
 
 func Execute() {
@@ -26,7 +26,7 @@ func Execute() {
 func init() {
 	cobra.OnInitialize(initConfig)
 
-	rootCmd.PersistentFlags().StringVar(&cfgFile, "config", "", "config file (default is $HOME/docker/.booked-room.yaml)")
+	rootCmd.PersistentFlags().StringVar(&cfgFile, "config", "", "config file (default is $HOME/docker/.bookedroom.yaml)")
 
 	rootCmd.Flags().BoolP("toggle", "t", false, "Help message for toggle")
 }
@@ -42,7 +42,7 @@ func initConfig() {
 		}
 
 		viper.AddConfigPath(home)
-		viper.SetConfigName(".booked-room")
+		viper.SetConfigName(".bookedroom")
 	}
 
 	viper.AutomaticEnv()

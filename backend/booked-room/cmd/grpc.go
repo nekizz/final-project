@@ -23,7 +23,7 @@ import (
 
 var grpcCmd = &cobra.Command{
 	Use:   "grpc",
-	Short: "booked-room service serve grpc command",
+	Short: "bookedroom service serve grpc command",
 	Run:   runGrpcCommand,
 }
 
@@ -67,18 +67,18 @@ func runGrpcCommand(cmd *cobra.Command, args []string) {
 	}()
 
 	logrus.WithFields(logrus.Fields{
-		"service": "booked-room",
+		"service": "bookedroom",
 		"type":    "grpc",
-	}).Info("booked-room service server started")
+	}).Info("bookedroom service server started")
 
 	<-c
 	ctx, cancel := context.WithCancel(ctx)
 	defer cancel()
 
 	logrus.WithFields(logrus.Fields{
-		"service": "booked-room-service",
+		"service": "bookedroom-service",
 		"type":    "grpc",
-	}).Info("booked-room service gracefully shutdowns")
+	}).Info("bookedroom service gracefully shutdowns")
 
 }
 

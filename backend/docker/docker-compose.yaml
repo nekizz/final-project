@@ -1,38 +1,38 @@
 version: '3.5'
 
 services:
-   ##Functional services
-    go-company-rest:
-      image: localhost:5000/go-company-service:latest
-      restart: always
-      command: go-company-service serve rest
-      environment:
-        - ADDRESS=go-company-rest:1400
-        - BACKEND=go-company-grpc:1401
-      ports:
-        - '1400:9090'
-      depends_on:
-        - "go-company-grpc"
-      hostname: go-company-rest
-      container_name: go-company-rest
-      networks:
-        - go
+  ##Functional services
+  go-company-rest:
+    image: localhost:5000/go-company-service:latest
+    restart: always
+    command: go-company-service serve rest
+    environment:
+      - ADDRESS=go-company-rest:1400
+      - BACKEND=go-company-grpc:1401
+    ports:
+      - '1400:9090'
+    depends_on:
+      - "go-company-grpc"
+    hostname: go-company-rest
+    container_name: go-company-rest
+    networks:
+      - go
 
-    go-company-grpc:
-      image: localhost:5000/go-company-service:latest
-      restart: always
-      command: go-company-service serve grpc
-      environment:
-        - BACKEND=go-company-grpc:1401
-        - MYSQLDSN=root:root@tcp(${LAN_IP}:3306)/go?charset=utf8mb4&parseTime=True&loc=Local
-      ports:
-        - '1401:9090'
-      depends_on:
-        - "mysql"
-      hostname: go-company-grpc
-      container_name: go-company-grpc
-      networks:
-        - go
+  go-company-grpc:
+    image: localhost:5000/go-company-service:latest
+    restart: always
+    command: go-company-service serve grpc
+    environment:
+      - BACKEND=go-company-grpc:1401
+      - MYSQLDSN=root:root@tcp(${LAN_IP}:3306)/go?charset=utf8mb4&parseTime=True&loc=Local
+    ports:
+      - '1401:9090'
+    depends_on:
+      - "mysql"
+    hostname: go-company-grpc
+    container_name: go-company-grpc
+    networks:
+      - go
 
   # New servies here
 

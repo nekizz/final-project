@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="100561d0-3fc6-405d-9716-ed476036ccf1" name="Changes" comment="build pbtype and fix name">
+    <list default="true" id="100561d0-3fc6-405d-9716-ed476036ccf1" name="Changes" comment="build pbtype service">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/docker/docker-compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/docker/docker-compose.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/pbtype/account/account.validator.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/backend/pbtype/account/account.validator.pb.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/pbtype/bill/bill.validator.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/backend/pbtype/bill/bill.validator.pb.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/pbtype/bookedroom/booked-room.validator.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/backend/pbtype/bookedroom/booked-room.validator.pb.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,7 +111,8 @@
     <MESSAGE value="build command" />
     <MESSAGE value="build base service" />
     <MESSAGE value="build pbtype and fix name" />
-    <option name="LAST_COMMIT_MESSAGE" value="build pbtype and fix name" />
+    <MESSAGE value="build pbtype service" />
+    <option name="LAST_COMMIT_MESSAGE" value="build pbtype service" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>

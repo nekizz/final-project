@@ -1,7 +1,7 @@
 
 .header {
     position: relative;
-    background-color: #fff;
+    background-color: var(--white);
     height: 82px;
 }
 
@@ -14,7 +14,7 @@
     font-family: 'Allison Script', sans-serif;
     display: flex;
     align-items: center;      
-    color: #0CA296;      
+    color: var(--primary);      
     font-size: 30px;   
     font-weight: 700; 
 }

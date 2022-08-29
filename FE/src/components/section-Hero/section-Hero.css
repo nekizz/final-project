@@ -50,7 +50,7 @@
     left: 6%;
     width: 50px;
     height: 60px;
-    border: 1px dotted #fff;
+    border: 1px dotted var(--white);
     border-radius: 50%;
     background: #ADB1B1;
     opacity: 0.5;
@@ -59,12 +59,12 @@
 .section-hero__icon {
     z-index: 1;
     font-size: 70px;
-    color: #fff;
+    color: var(--white);
 
 }
 
 .section-hero__explore .section-hero__text {
-    color: #fff;
+    color: var(--white);
     font-size: 18px;
     font-family: "Circular Std";
     font-weight: 500;

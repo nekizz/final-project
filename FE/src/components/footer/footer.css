@@ -20,7 +20,7 @@
 }
 
 .footer__information {
-    color: #000;
+    color: var(--black);
 }
 
 .footer__information__wrapper {
@@ -41,11 +41,11 @@
 
 .social__icon {
     font-size: 20px;
-    color: #000;
-    transition: ease-in 1s;
+    color: var(--black);
+    transition: 1s ease-in;
 }
 
 .social__icon:hover {
-    color: #000;
+    color: var(--black);
 
 }

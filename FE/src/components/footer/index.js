@@ -53,16 +53,16 @@ function Footer() {
           </div>
         ))}
         <div className="footer__social">
-          <a href="">
+          <a href="/">
             <FaFacebook className="social__icon" />
           </a>
-          <a href="">
+          <a href="/">
             <FaTwitter className="social__icon" />
           </a>
-          <a href="">
+          <a href="/">
             <FaInstagram className="social__icon" />
           </a>
-          <a href="">
+          <a href="/">
             <FaLinkedinIn className="social__icon" />
           </a>
         </div>

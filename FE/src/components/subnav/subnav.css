@@ -1,19 +1,22 @@
 
 
 .subnav-list__items{
-    display: inline-block;
-    padding-left: 200px;
-    padding-top: 200px;
+    display: flex;
 }
 
 .subnav__item{
     display: inline-block;
-    padding-left: 60px;
+    padding-right: 40px;
     font-weight: 700;
+}
+
+.subnav__item:last-child {
+    padding: 0;
 }
 
 .subnav__item--link {
     position: relative;
+    font-size: 14px;
 }
 
 .subnav__item--link:after {

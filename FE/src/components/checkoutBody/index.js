@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./checkoutbody.css";
 import classNames from "classnames/bind";
-
+import Button from "../Button";
 const cx = classNames.bind(styles);
 
 function CheckOutBody() {
@@ -18,7 +18,9 @@ function CheckOutBody() {
           <span className={cx("subtitle")}>hehe</span>
         </div>
       </div>
-      <div className={cx("more-information")}>heheheheh</div>
+      <div className={cx("more-information")}>
+        <Button primary> hehe</Button>
+      </div>
     </div>
   );
 }

@@ -1,4 +1,7 @@
 
+.subnav-wrapper__checkout {
+    padding-left: 70px;
+}
 
 .subnav-list__items{
     display: flex;

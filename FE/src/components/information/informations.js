@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./informations.css";
 import Subnav from "../subnav";
+
 import PriceTable from "../priceTable";
 import { IoIosPeople } from "react-icons/io";
 import {
@@ -23,8 +24,6 @@ const cx = classNames.bind(styles);
 // }));
 
 function Informations() {
-  // const [posts, setPost] = useState([]);
-
   return (
     <div className={cx("container")}>
       <div className={cx("columnleft")}>
@@ -147,33 +146,33 @@ function Informations() {
           <PriceTable />
 
           {/* <table className="table">
-            <tbody>
-              <tr>
-                <th>Rent</th>
-                <th>Groceries</th>
-                <th>Others</th>
-                <th>Total</th>
-              </tr>
-              <tr>
-                <td id="money"> $1,800</td>
-                <td id="money"> $1,600</td>
-                <td id="money"> $2,200</td>
-                <td id="money"> $5,600</td>
-              </tr>
-              <tr>
-                <td>This is for 3 bedrooms within city center </td>
-                <td>The average cost of Groceries for a family of 4 </td>
-                <td>
-                  The average of monthly cost of Gas, Water, Electricity and
-                  Internet{" "}
-                </td>
-                <td>
-                  This is the average of monthly spending for a family of four
-                  (4){" "}
-                </td>
-              </tr>
-            </tbody>
-          </table> */}
+              <tbody>
+                <tr>
+                  <th>Rent</th>
+                  <th>Groceries</th>
+                  <th>Others</th>
+                  <th>Total</th>
+                </tr>
+                <tr>
+                  <td id="money"> $1,800</td>
+                  <td id="money"> $1,600</td>
+                  <td id="money"> $2,200</td>
+                  <td id="money"> $5,600</td>
+                </tr>
+                <tr>
+                  <td>This is for 3 bedrooms within city center </td>
+                  <td>The average cost of Groceries for a family of 4 </td>
+                  <td>
+                    The average of monthly cost of Gas, Water, Electricity and
+                    Internet{" "}
+                  </td>
+                  <td>
+                    This is the average of monthly spending for a family of four
+                    (4){" "}
+                  </td>
+                </tr>
+              </tbody>
+            </table> */}
         </div>
       </div>
     </div>

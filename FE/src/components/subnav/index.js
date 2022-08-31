@@ -30,7 +30,9 @@ function Subnav({ information = false }) {
 
   return (
     <Fragment>
-      <div className="subnav-wrapper">
+      <div
+        className={information ? "subnav-wrapper" : "subnav-wrapper__checkout"}
+      >
         <ul className="subnav-list__items">
           {myObject.map((element, index) => (
             <li

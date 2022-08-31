@@ -39,13 +39,7 @@
     color: var(--white);
 }
 
-.img-title {
 
-}
-
-.img-desription {
-
-}
 
 
 .img {
@@ -93,9 +87,14 @@
     color: var(--primary);
 }
 
+.star-icon {
+    margin-right: 10px;
+}
+
 .cloud-wrapper {
     display: flex;
     flex-direction: column;
+    margin-right: 10px;
 }
 
 .cloud-drizzle-icon {
@@ -135,9 +134,7 @@
     border-spacing: 10px;
 }
 
-.price-table__row {
-    /* padding-bottom: 15px; */
-}
+
 
 .price-table__header {
     color: rgba(0, 0, 0, 0.4);

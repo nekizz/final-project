@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./checkoutbody.css";
+import styles from "./checkoutbody.module.css";
 import classNames from "classnames/bind";
 import Button from "../Button";
 const cx = classNames.bind(styles);

@@ -53,9 +53,28 @@
 }
 
 .top-destinations-item {
+    position: relative;
     height: 70vh;
     flex-basis: 20%;
     position: relative;
+    transition: .5s ease-out;
+}
+
+.top-destinations-item:hover {
+    transform: rotateY(180deg);
+    transform-style: preserve-3d;
+}
+
+.front,.back {
+    height: 100%;
+    width: 100%;
+    backface-visibility: hidden;
+    position: absolute;
+}
+
+.back {
+    background-color: var(--white);
+    transform: rotateY(180deg);
 }
 
 .top-destinations-item__img {

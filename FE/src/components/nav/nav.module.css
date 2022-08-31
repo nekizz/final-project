@@ -73,9 +73,36 @@
 .menu-nav__item {
     display: inline-block;
     padding-left: 2rem;
+    transition: .3s ease-in;
+
 }
 
 .menu-nav__link {
+    position: relative;
     text-decoration: none;
     color: #000000;
+    transition: .3s ease-in;
 }
+
+.menu-nav__link::before {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    width: 0;
+    left: 0;
+    height: 0;
+    background-color: var(--primary);
+    transition: .3s ease-in;
+}
+
+.menu-nav__link:hover::before {
+    width: 100%;
+    height: 3px;
+}
+
+.menu-nav__link:hover {
+    color: var(--primary);
+    font-size: 25px;
+}
+
+

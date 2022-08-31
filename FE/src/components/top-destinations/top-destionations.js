@@ -40,17 +40,22 @@ function TopDestinations() {
       <div className={cx("top-destinations-container")}>
         {topDestinations.map((destination, index) => (
           <div className={cx("top-destinations-item")} key={index}>
-            <img
-              src={imga}
-              className={cx("top-destinations-item__img")}
-              alt=""
-            />
-            <div className={cx("top-destinations-info")}>
-              <h3 className={cx("top-destinations-state")}>
-                {destination.state}
-              </h3>
-              <p className={cx("top-destinations-city")}>{destination.city}</p>
+            <div className={cx("front")}>
+              <img
+                src={imga}
+                className={cx("top-destinations-item__img")}
+                alt=""
+              />
+              <div className={cx("top-destinations-info")}>
+                <h3 className={cx("top-destinations-state")}>
+                  {destination.state}
+                </h3>
+                <p className={cx("top-destinations-city")}>
+                  {destination.city}
+                </p>
+              </div>
             </div>
+            <div className={cx("back")}>hehe</div>
           </div>
         ))}
       </div>

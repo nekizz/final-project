@@ -23,7 +23,7 @@ button,input,[tabindex] {
     border: none;
 }
 
-a[href] {
+a{
     color: #333;
     text-decoration: none;
 }

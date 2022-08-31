@@ -23,18 +23,12 @@ const cx = classNames.bind(styles);
 // }));
 
 function Informations() {
+  // const [posts, setPost] = useState([]);
+
   return (
     <div className={cx("container")}>
       <div className={cx("columnleft")}>
-        <Subnav />
-        <p className={cx("columnleft-desc")}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ipsum
-          purus, bibendum sit amet vulputate eget, porta semper ligula. Donec
-          bibendum vulputate erat, ac fringilla mi finibus nec. Donec ac dolor
-          sed dolor porttitor blandit vel vel purus. Fusce vel malesuada ligula.
-          Nam quis vehicula ante, eu finibus est. Proin ullamcorper fermentum
-          orci, quis finibus massa. Nunc
-        </p>
+        <Subnav information />
         <div>
           <p className={cx("type")}> Articles about paraty </p>
           <div className={cx("img-wrapper")}>

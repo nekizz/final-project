@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React, { Fragment, useState } from "react";
 import "./subnav.css";
 
-function Subnav() {
+function Subnav({ information = false }) {
   const myObject = [
     "ABOUT",
     "NEIGHBORHOODS",
@@ -10,12 +10,14 @@ function Subnav() {
     "LEISURE AND PARKS",
   ];
 
+  const [type, setType] = useState(myObject[0]);
   const [state, changeState] = useState({
     activeObject: myObject[0],
   });
 
-  function handleClick(index) {
+  function handleClick(index, element) {
     changeState({ ...state, activeObject: myObject[index] });
+    setType(element);
   }
 
   function toggleActive(index) {
@@ -27,21 +29,24 @@ function Subnav() {
   }
 
   return (
-    <div className="subnav-wrapper">
-      <ul className="subnav-list__items">
-        {myObject.map((element, index) => (
-          <li
-            key={index}
-            className={toggleActive(index)}
-            onClick={() => {
-              handleClick(index);
-            }}
-          >
-            <span className="subnav__item--link">{element}</span>
-          </li>
-        ))}
-      </ul>
-    </div>
+    <Fragment>
+      <div className="subnav-wrapper">
+        <ul className="subnav-list__items">
+          {myObject.map((element, index) => (
+            <li
+              key={index}
+              className={toggleActive(index)}
+              onClick={() => {
+                handleClick(index, element);
+              }}
+            >
+              <span className="subnav__item--link">{element}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+      {information ? <p className="columnleft-desc">{type}</p> : null}
+    </Fragment>
   );
 }
 

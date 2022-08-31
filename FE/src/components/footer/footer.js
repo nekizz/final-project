@@ -1,11 +1,15 @@
 import React from "react";
-import "./footer.css";
+import classNames from "classnames/bind";
+
+import styles from "./footer.module.css";
 import {
   FaFacebook,
   FaTwitter,
   FaInstagram,
   FaLinkedinIn,
 } from "react-icons/fa";
+
+const cx = classNames.bind(styles);
 
 const footerInformation = [
   {
@@ -38,32 +42,32 @@ const footerInformation = [
 
 function Footer() {
   return (
-    <footer className="footer">
-      <div className="footer__container">
+    <footer className={cx("footer")}>
+      <div className={cx("footer__container")}>
         {footerInformation.map((item, index) => (
-          <div key={index} className="footer__information">
+          <div key={index} className={cx("footer__information")}>
             <h2>{item.name}</h2>
-            <div className="footer__information__wrapper">
+            <div className={cx("footer__information__wrapper")}>
               {item.array.map((i, index) => (
-                <span className="footer__information__desc" key={index}>
+                <span className={cx("footer__information__desc")} key={index}>
                   {i}
                 </span>
               ))}
             </div>
           </div>
         ))}
-        <div className="footer__social">
+        <div className={cx("footer__social")}>
           <a href="/">
-            <FaFacebook className="social__icon" />
+            <FaFacebook className={cx("social__icon")} />
           </a>
           <a href="/">
-            <FaTwitter className="social__icon" />
+            <FaTwitter className={cx("social__icon")} />
           </a>
           <a href="/">
-            <FaInstagram className="social__icon" />
+            <FaInstagram className={cx("social__icon")} />
           </a>
           <a href="/">
-            <FaLinkedinIn className="social__icon" />
+            <FaLinkedinIn className={cx("social__icon")} />
           </a>
         </div>
       </div>

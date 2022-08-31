@@ -1,23 +1,25 @@
 import React from "react";
-import "./nav.css";
+import styles from "./nav.module.css";
+import classNames from "classnames/bind";
+const cx = classNames.bind(styles);
 
 const navItem = ["Destinations", "Deals", "Explore", "Resources"];
 
 function NavBar() {
   return (
-    <header className="header">
-      <div className="menu-btn">
-        <span className="menu-btn__burger"></span>
+    <header className={cx("header")}>
+      <div className={cx("menu-btn")}>
+        <span className={cx("menu-btn__burger")}></span>
       </div>
 
-      <div className="menu__relocate">
+      <div className={cx("menu__relocate")}>
         <span>Relocate</span>
       </div>
 
-      <ul className="menu-nav">
+      <ul className={cx("menu-nav")}>
         {navItem.map((item, index) => (
-          <li key={index} className="menu-nav__item ">
-            <a href="./nav.js" className="menu-nav__link">
+          <li key={index} className={cx("menu-nav__item")}>
+            <a href="./nav.js" className={cx("menu-nav__link")}>
               {item}
             </a>
           </li>

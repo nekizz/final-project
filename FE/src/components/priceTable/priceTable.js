@@ -1,4 +1,4 @@
-import styles from "./priceTable.css";
+import styles from "./priceTable.module.css";
 import classNames from "classnames/bind";
 const cx = classNames.bind(styles);
 
@@ -13,10 +13,10 @@ function PriceTable() {
           <th className={cx("price-table__header total")}>Total</th>
         </tr>
         <tr className={cx("price-table__row")}>
-          <td className="money"> $1,800</td>
-          <td className="money"> $1,600</td>
-          <td className="money"> $2,200</td>
-          <td className="money"> $5,600</td>
+          <td className={cx("money")}> $1,800</td>
+          <td className={cx("money")}> $1,600</td>
+          <td className={cx("money")}> $2,200</td>
+          <td className={cx("money")}> $5,600</td>
         </tr>
         <tr className={cx("price-table__row")}>
           <td className={cx("price-table__desc")}>

@@ -1,18 +1,20 @@
 import React from "react";
-import "./section-Hero.css";
+import styles from "./section-Hero.module.css";
 import { HiArrowNarrowDown } from "react-icons/hi";
+import classNames from "classnames/bind";
+const cx = classNames.bind(styles);
 
 function SectionHero() {
   return (
-    <div className="section-hero">
-      <div className="section-hero__content">
-        <p className="section-hero__heading">make the right</p>
-        <p className="section-hero__slogan">MOVE.</p>
+    <div className={cx("section-hero")}>
+      <div className={cx("section-hero__content")}>
+        <p className={cx("section-hero__heading")}>make the right</p>
+        <p className={cx("section-hero__slogan")}>MOVE.</p>
       </div>
-      <div className="section-hero__explore">
-        <div className="section-hero__circle"></div>
-        <HiArrowNarrowDown className="section-hero__icon" />
-        <div className="section-hero__text">
+      <div className={cx("section-hero__explore")}>
+        <div className={cx("section-hero__circle")}></div>
+        <HiArrowNarrowDown className={cx("section-hero__icon")} />
+        <div className={cx("section-hero__text")}>
           Explore <br /> Destination
         </div>
       </div>

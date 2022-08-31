@@ -1,8 +1,8 @@
 import React from "react";
-import styles from "./informations.css";
-import Subnav from "../subnav";
+import styles from "./informations.module.css";
+import Subnav from "../subnav/subnav";
 
-import PriceTable from "../priceTable";
+import PriceTable from "../priceTable/priceTable";
 import { IoIosPeople } from "react-icons/io";
 import {
   BsFillCloudDrizzleFill,
@@ -142,37 +142,8 @@ function Informations() {
         <div className={cx("price")}>
           <p className={cx("type")}> Monthly spend for a family of 4</p>
           <PriceTable />
-          <p className="type"> Monthly spend for a individual</p>
+          <p className={cx("type")}> Monthly spend for a individual</p>
           <PriceTable />
-
-          {/* <table className="table">
-              <tbody>
-                <tr>
-                  <th>Rent</th>
-                  <th>Groceries</th>
-                  <th>Others</th>
-                  <th>Total</th>
-                </tr>
-                <tr>
-                  <td id="money"> $1,800</td>
-                  <td id="money"> $1,600</td>
-                  <td id="money"> $2,200</td>
-                  <td id="money"> $5,600</td>
-                </tr>
-                <tr>
-                  <td>This is for 3 bedrooms within city center </td>
-                  <td>The average cost of Groceries for a family of 4 </td>
-                  <td>
-                    The average of monthly cost of Gas, Water, Electricity and
-                    Internet{" "}
-                  </td>
-                  <td>
-                    This is the average of monthly spending for a family of four
-                    (4){" "}
-                  </td>
-                </tr>
-              </tbody>
-            </table> */}
         </div>
       </div>
     </div>

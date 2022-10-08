@@ -227,6 +227,9 @@
         "description": {
           "type": "string"
         },
+        "comment": {
+          "type": "string"
+        },
         "created_at": {
           "type": "string"
         },

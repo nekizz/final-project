@@ -26,6 +26,7 @@ message Room {
   string type = 3;
   string price = 4;
   string description = 5;
+  string statis =6;
 
   string created_at = 20;
   string updated_at = 21;

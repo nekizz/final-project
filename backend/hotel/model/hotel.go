@@ -9,5 +9,6 @@ type Hotel struct {
 	Address     string
 	Rate        string
 	Rule        string
+	Comment     string
 	Description string
 }

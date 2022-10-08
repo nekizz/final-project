@@ -24,6 +24,7 @@ message Account {
   string id = 1;
   string username = 2;
   string password = 3;
+  string token = 4;
 
   string created_at = 20;
   string updated_at = 21;

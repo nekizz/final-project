@@ -24,7 +24,8 @@ message Payment {
   string id = 1;
   string payment_type = 2;
   string payment_date = 3;
-  string note = 4;
+  string payment_status =4;
+  string note = 5;
 
   string created_at = 20;
   string updated_at = 21;

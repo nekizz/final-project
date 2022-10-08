@@ -7,7 +7,8 @@ import (
 
 type Payment struct {
 	gorm.Model
-	PaymentDate time.Time
-	PaymentType string
-	Note        string
+	PaymentDate   time.Time
+	PaymentType   string
+	PaymentStatus string
+	Note          string
 }

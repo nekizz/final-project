@@ -266,6 +266,9 @@
         "description": {
           "type": "string"
         },
+        "statis": {
+          "type": "string"
+        },
         "created_at": {
           "type": "string"
         },

@@ -8,4 +8,5 @@ type Account struct {
 	gorm.Model
 	Username string
 	Password string
+	Token    string
 }

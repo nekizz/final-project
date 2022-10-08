@@ -246,6 +246,9 @@
         "payment_date": {
           "type": "string"
         },
+        "payment_status": {
+          "type": "string"
+        },
         "note": {
           "type": "string"
         },

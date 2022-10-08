@@ -22,7 +22,7 @@ option (gogoproto.messagename_all) = true;
 
 message Customer {
   string id = 1;
-  string card_number = 2;
+  string role = 2;
   string description = 4;
 
   string created_at = 20;

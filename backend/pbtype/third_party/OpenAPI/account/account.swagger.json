@@ -213,6 +213,9 @@
         "password": {
           "type": "string"
         },
+        "token": {
+          "type": "string"
+        },
         "created_at": {
           "type": "string"
         },

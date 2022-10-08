@@ -1,0 +1,299 @@
+version: '3.5'
+
+services:
+  ##Account service
+  go-account-rest:
+    image: localhost:5000/go-account-service:latest
+    restart: always
+    command: go-account-service serve rest
+    environment:
+      - ADDRESS=go-account-rest:1400
+      - BACKEND=go-account-grpc:1401
+    ports:
+      - '1400:9090'
+    depends_on:
+      - "go-account-grpc"
+    hostname: go-account-rest
+    container_name: go-account-rest
+    networks:
+      - go
+
+#  go-account-grpc:
+#    image: localhost:5000/go-account-service:latest
+#    restart: always
+#    command: go-account-service serve grpc
+#    environment:
+#      - BACKEND=go-account-grpc:1401
+#      - MYSQLDSN=root:root@tcp(${LAN_IP}:3306)/go?charset=utf8mb4&parseTime=True&loc=Local
+#    ports:
+#      - '1401:9090'
+#    depends_on:
+#      - "mysql"
+#    hostname: go-account-grpc
+#    container_name: go-account-grpc
+#    networks:
+#      - go
+#
+#  ##Booked-room service
+#  go-booked-room-rest:
+#    image: localhost:5000/go-booked-room-service:latest
+#    restart: always
+#    command: go-booked-room-service serve rest
+#    environment:
+#      - ADDRESS=go-booked-room-rest:1402
+#      - BACKEND=go-booked-room-grpc:1403
+#    ports:
+#      - '1402:9090'
+#    depends_on:
+#      - "go-booked-room-grpc"
+#    hostname: go-booked-room-rest
+#    container_name: go-booked-room-rest
+#    networks:
+#      - go
+#
+#  go-booked-room-grpc:
+#    image: localhost:5000/go-booked-room-service:latest
+#    restart: always
+#    command: go-booked-room-service serve grpc
+#    environment:
+#      - BACKEND=go-booked-room-grpc:1403
+#      - MYSQLDSN=root:root@tcp(${LAN_IP}:3306)/go?charset=utf8mb4&parseTime=True&loc=Local
+#    ports:
+#      - '1403:9090'
+#    depends_on:
+#      - "mysql"
+#    hostname: go-booked-room-grpc
+#    container_name: go-booked-room-grpc
+#    networks:
+#      - go
+#
+#  ##Booking service
+#  go-booking-rest:
+#    image: localhost:5000/go-booking-service:latest
+#    restart: always
+#    command: go-booking-service serve rest
+#    environment:
+#      - ADDRESS=go-booking-rest:1404
+#      - BACKEND=go-booking-grpc:1405
+#    ports:
+#      - '1404:9090'
+#    depends_on:
+#      - "go-booking-grpc"
+#    hostname: go-booking-rest
+#    container_name: go-booking-rest
+#    networks:
+#      - go
+#
+#  go-booking-grpc:
+#    image: localhost:5000/go-booking-service:latest
+#    restart: always
+#    command: go-booking-service serve grpc
+#    environment:
+#      - BACKEND=go-booking-grpc:1405
+#      - MYSQLDSN=root:root@tcp(${LAN_IP}:3306)/go?charset=utf8mb4&parseTime=True&loc=Local
+#    ports:
+#      - '1405:9090'
+#    depends_on:
+#      - "mysql"
+#    hostname: go-booking-grpc
+#    container_name: go-booking-grpc
+#    networks:
+#      - go
+#
+#  ##Hotel service
+#  go-hotel-rest:
+#    image: localhost:5000/go-hotel-service:latest
+#    restart: always
+#    command: go-hotel-service serve rest
+#    environment:
+#      - ADDRESS=go-hotel-rest:1406
+#      - BACKEND=go-hotel-grpc:1407
+#    ports:
+#      - '1406:9090'
+#    depends_on:
+#      - "go-hotel-grpc"
+#    hostname: go-hotel-rest
+#    container_name: go-hotel-rest
+#    networks:
+#      - go
+#
+#  go-hotel-grpc:
+#    image: localhost:5000/go-hotel-service:latest
+#    restart: always
+#    command: go-hotel-service serve grpc
+#    environment:
+#      - BACKEND=go-hotel-grpc:1407
+#      - MYSQLDSN=root:root@tcp(${LAN_IP}:3306)/go?charset=utf8mb4&parseTime=True&loc=Local
+#    ports:
+#      - '1407:9090'
+#    depends_on:
+#      - "mysql"
+#    hostname: go-hotel-grpc
+#    container_name: go-hotel-grpc
+#    networks:
+#      - go
+#
+#  ##Payment service
+#  go-payment-rest:
+#    image: localhost:5000/go-payment-service:latest
+#    restart: always
+#    command: go-payment-service serve rest
+#    environment:
+#      - ADDRESS=go-payment-rest:1408
+#      - BACKEND=go-payment-grpc:1409
+#    ports:
+#      - '1408:9090'
+#    depends_on:
+#      - "go-payment-grpc"
+#    hostname: go-payment-rest
+#    container_name: go-payment-rest
+#    networks:
+#      - go
+#
+#  go-payment-grpc:
+#    image: localhost:5000/go-payment-service:latest
+#    restart: always
+#    command: go-payment-service serve grpc
+#    environment:
+#      - BACKEND=go-payment-grpc:1409
+#      - MYSQLDSN=root:root@tcp(${LAN_IP}:3306)/go?charset=utf8mb4&parseTime=True&loc=Local
+#    ports:
+#      - '1409:9090'
+#    depends_on:
+#      - "mysql"
+#    hostname: go-payment-grpc
+#    container_name: go-payment-grpc
+#    networks:
+#      - go
+#
+#  ##Room service
+#  go-room-rest:
+#    image: localhost:5000/go-room-service:latest
+#    restart: always
+#    command: go-room-service serve rest
+#    environment:
+#      - ADDRESS=go-room-rest:1410
+#      - BACKEND=go-room-grpc:1411
+#    ports:
+#      - '1410:9090'
+#    depends_on:
+#      - "go-room-grpc"
+#    hostname: go-room-rest
+#    container_name: go-room-rest
+#    networks:
+#      - go
+#
+#  go-room-grpc:
+#    image: localhost:5000/go-room-service:latest
+#    restart: always
+#    command: go-room-service serve grpc
+#    environment:
+#      - BACKEND=go-room-grpc:1411
+#      - MYSQLDSN=root:root@tcp(${LAN_IP}:3306)/go?charset=utf8mb4&parseTime=True&loc=Local
+#    ports:
+#      - '1411:9090'
+#    depends_on:
+#      - "mysql"
+#    hostname: go-room-grpc
+#    container_name: go-room-grpc
+#    networks:
+#      - go
+#
+#  ##Services service
+#  go-service-rest:
+#    image: localhost:5000/go-service-service:latest
+#    restart: always
+#    command: go-service-service serve rest
+#    environment:
+#      - ADDRESS=go-service-rest:1412
+#      - BACKEND=go-service-grpc:1413
+#    ports:
+#      - '1412:9090'
+#    depends_on:
+#      - "go-service-grpc"
+#    hostname: go-service-rest
+#    container_name: go-service-rest
+#    networks:
+#      - go
+#
+#  go-service-grpc:
+#    image: localhost:5000/go-service-service:latest
+#    restart: always
+#    command: go-service-service serve grpc
+#    environment:
+#      - BACKEND=go-service-grpc:1413
+#      - MYSQLDSN=root:root@tcp(${LAN_IP}:3306)/go?charset=utf8mb4&parseTime=True&loc=Local
+#    ports:
+#      - '1413:9090'
+#    depends_on:
+#      - "mysql"
+#    hostname: go-service-grpc
+#    container_name: go-service-grpc
+#    networks:
+#      - go
+#
+#  ##Used-Service service
+#  go-usedservice-rest:
+#    image: localhost:5000/go-used-service-service:latest
+#    restart: always
+#    command: go-used-service-service serve rest
+#    environment:
+#      - ADDRESS=go-used-service-rest:1414
+#      - BACKEND=go-used-service-grpc:1415
+#    ports:
+#      - '1414:9090'
+#    depends_on:
+#      - "go-used-service-grpc"
+#    hostname: go-used-service-rest
+#    container_name: go-used-service-rest
+#    networks:
+#      - go
+#
+#  go-used-service-grpc:
+#    image: localhost:5000/go-used-service-service:latest
+#    restart: always
+#    command: go-used-service-service serve grpc
+#    environment:
+#      - BACKEND=go-used-service-grpc:1415
+#      - MYSQLDSN=root:root@tcp(${LAN_IP}:3306)/go?charset=utf8mb4&parseTime=True&loc=Local
+#    ports:
+#      - '1415:9090'
+#    depends_on:
+#      - "mysql"
+#    hostname: go-used-service-grpc
+#    container_name: go-used-service-grpc
+#    networks:
+#      - go
+#
+#  ##User service
+#  go-user-rest:
+#    image: localhost:5000/go-user-service:latest
+#    restart: always
+#    command: go-user-service serve rest
+#    environment:
+#      - ADDRESS=go-user-rest:1416
+#      - BACKEND=go-user-grpc:1417
+#    ports:
+#      - '1416:9090'
+#    depends_on:
+#      - "go-user-grpc"
+#    hostname: go-user-rest
+#    container_name: go-user-rest
+#    networks:
+#      - go
+#
+#  go-user-grpc:
+#    image: localhost:5000/go-user-service:latest
+#    restart: always
+#    command: go-user-service serve grpc
+#    environment:
+#      - BACKEND=go-user-grpc:1417
+#      - MYSQLDSN=root:root@tcp(${LAN_IP}:3306)/go?charset=utf8mb4&parseTime=True&loc=Local
+#    ports:
+#      - '1417:9090'
+#    depends_on:
+#      - "mysql"
+#    hostname: go-user-grpc
+#    container_name: go-user-grpc
+#    networks:
+#      - go

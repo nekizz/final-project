@@ -207,7 +207,7 @@
         "id": {
           "type": "string"
         },
-        "card_number": {
+        "role": {
           "type": "string"
         },
         "description": {

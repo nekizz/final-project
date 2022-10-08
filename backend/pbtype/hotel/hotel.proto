@@ -28,6 +28,7 @@ message Hotel {
   int32 rate = 5;
   string rule = 6;
   string description = 7;
+  string comment =8;
 
   string created_at = 20;
   string updated_at = 21;

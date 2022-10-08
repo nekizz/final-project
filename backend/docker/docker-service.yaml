@@ -1,0 +1,80 @@
+version: '3.5'
+
+services:
+
+  # Infrastructure services
+  mysql:
+    image: mysql:latest
+    restart: always
+    cap_add:
+      - ALL  # CAP_SYS_NICE
+    volumes:
+      - ./mysql/data:/var/lib/mysql
+    environment:
+      - MYSQL_DATABASE=go
+      - MYSQL_PASSWORD=root
+      - MYSQL_ROOT_PASSWORD=root
+    ports:
+      - '3306:3306'
+    hostname: mysql
+    container_name: mysql
+    networks:
+      - go
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    environment:
+      - PMA_HOST=mysql
+      - PMA_USER=root
+      - PMA_PASSWORD=root
+      - MYSQL_ROOT_PASSWORD=root
+    ports:
+      - '8080:80'
+    networks:
+      - go
+
+#  nginx:
+#    image: nginx:latest
+#    restart: always
+#    volumes:
+#      - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+#    ports:
+#      - '80:80'
+#      - '443:443'
+#    expose:
+#      - '80'
+#      - '443'
+#    hostname: nginx
+#    container_name: nginx
+#    networks:
+#      - go
+#
+#  zookeeper:
+#    image: wursmeister/zookeeper
+#    restart: always
+#    ports:
+#      - '2181:2181'
+#    hostname: zookeeper
+#    container_name: zookeeper
+#    networks:
+#      - go
+#
+#  kafka:
+#    image: wursmeister/kafka
+#    restart: always
+#    ports:
+#      - '9092:9092'
+#    environment:
+#      KAFKA_ADVERTISED_HOST_NAME: 172.17.0.1
+#      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+#    depends_on:
+#      - zookeeper
+#    volumes:
+#      - /var/run/docker.sock:/var/run/docker.sock
+#    hostname: kafke
+#    container_name: kafka
+#    networks:
+#      - go
+
+networks:
+  go:

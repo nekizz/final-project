@@ -8,9 +8,9 @@ import (
 
 var serveCmd = &cobra.Command{
 	Use:   "serve",
-	Short: "booked-room service serve command",
+	Short: "bookedroom service serve command",
 	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println("booked-room service serve command called")
+		fmt.Println("bookedroom service serve command called")
 	},
 }
 

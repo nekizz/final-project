@@ -1,0 +1,87 @@
+syntax = "proto3";
+
+package room;
+
+option go_package = "github.com/n3kizz/final-project/backend/pbtype/room";
+
+import "github.com/gogo/protobuf/gogoproto/gogo.proto";
+import "google/protobuf/empty.proto";
+import "google/api/annotations.proto";
+
+
+// Enable custom Marshal method.
+option (gogoproto.marshaler_all) = true;
+// Enable custom Unmarshal method.
+option (gogoproto.unmarshaler_all) = true;
+// Enable custom Size method (Required by Marshal and Unmarshal).
+option (gogoproto.sizer_all) = true;
+// Enable registration with golang/protobuf for the grpc-gateway.
+option (gogoproto.goproto_registration) = true;
+// Enable generation of XXX_MessageName methods for grpc-go/status.
+option (gogoproto.messagename_all) = true;
+
+message Room {
+  string id = 1;
+  string name = 2;
+  string type = 3;
+  string price = 4;
+  string description = 5;
+  string statis =6;
+
+  string created_at = 20;
+  string updated_at = 21;
+}
+
+message OneRoomRequest {
+  string id = 1;
+}
+
+message ListRoomRequest {
+  uint32 page = 3;
+  uint32 limit = 4;
+  string created_at_min = 5;
+  string created_at_max = 6;
+  string search_field = 7;
+  string search_value = 8;
+}
+
+message ListRoomResponse {
+  repeated Room items = 1;
+  uint32 max_page = 2;
+  uint32 total_count = 3;
+  uint32 page = 4;
+  uint32 limit = 5;
+  string search_field = 6;
+  string search_value = 7;
+}
+
+service PaymentService {
+  rpc Create(Room) returns (Room) {
+    option (google.api.http) = {
+      post: "/room"
+      body: "*"
+    };
+  };
+
+  rpc Update(Room) returns (Room) {
+    option (google.api.http) = {
+      put: "/room/{id}"
+      body: "*"
+    };
+  };
+  rpc Get(OneRoomRequest) returns (Room) {
+    option (google.api.http) = {
+      get: "/room/{id}"
+    };
+  };
+  rpc List(ListRoomRequest) returns (ListRoomResponse) {
+    option (google.api.http) = {
+      get: "/payments"
+    };
+  };
+  rpc Delete(OneRoomRequest) returns (google.protobuf.Empty) {
+    option (google.api.http) = {
+      delete: "/payment/{id}"
+    };
+  };
+}

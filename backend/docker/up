@@ -1,3 +1,5 @@
 #!/bin/bash
 
-docker-compose -f docker-compose.yml up --remove-orphans -d
+docker-compose -f docker-service.yml \
+  -f  docker-core-service.yml \
+  up --remove-orphans -d

@@ -5,11 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="100561d0-3fc6-405d-9716-ed476036ccf1" name="Changes" comment="build docker">
-      <change afterPath="$PROJECT_DIR$/backend/docker/docker-core-service.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/docker/docker-compose.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/docker/down" beforeDir="false" afterPath="$PROJECT_DIR$/backend/docker/down" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/docker/up" beforeDir="false" afterPath="$PROJECT_DIR$/backend/docker/up" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/account/account/service.go" beforeDir="false" afterPath="$PROJECT_DIR$/backend/account/account/service.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/account/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/backend/account/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/pbtype/account/account.validator.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/backend/pbtype/account/account.validator.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/pbtype/bill/bill.validator.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/backend/pbtype/bill/bill.validator.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/pbtype/bookedroom/booked-room.validator.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/backend/pbtype/bookedroom/booked-room.validator.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/pbtype/booking/booking.validator.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/backend/pbtype/booking/booking.validator.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/pbtype/hotel/hotel.validator.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/backend/pbtype/hotel/hotel.validator.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/pbtype/payment/payment.validator.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/backend/pbtype/payment/payment.validator.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/pbtype/room/room.validator.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/backend/pbtype/room/room.validator.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/pbtype/service/service.validator.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/backend/pbtype/service/service.validator.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/pbtype/usedservice/userservice.validator.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/backend/pbtype/usedservice/userservice.validator.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/pbtype/user/customer.validator.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/backend/pbtype/user/customer.validator.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/pbtype/user/employee.validator.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/backend/pbtype/user/employee.validator.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/pbtype/user/user.validator.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/backend/pbtype/user/user.validator.pb.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,38 +48,39 @@
     <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="2DlFjAmlJrvUDAHUgvghbDBIqNX" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultGoTemplateProperty&quot;: &quot;Go File&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.format.on.save.advertiser.fired&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.modules.go.list.on.any.changes.was.set&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.watchers.conflict.with.on.save.actions.check.performed&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;configurable..is.expanded&quot;: &quot;false&quot;,
-    &quot;configurable.GoLibrariesConfigurable.is.expanded&quot;: &quot;true&quot;,
-    &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
-    &quot;go.sdk.automatically.set&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/n3kizz/Projects/go/src/github.com/n3kizz/final-project&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;google.protobuf.language&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultGoTemplateProperty": "Go File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.go.format.on.save.advertiser.fired": "true",
+    "RunOnceActivity.go.formatter.settings.were.checked": "true",
+    "RunOnceActivity.go.migrated.go.modules.settings": "true",
+    "RunOnceActivity.go.modules.go.list.on.any.changes.was.set": "true",
+    "RunOnceActivity.go.watchers.conflict.with.on.save.actions.check.performed": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "configurable..is.expanded": "false",
+    "configurable.GoLibrariesConfigurable.is.expanded": "true",
+    "go.import.settings.migrated": "true",
+    "go.sdk.automatically.set": "true",
+    "last_opened_file_path": "/home/n3kizz/Projects/go/src/github.com/n3kizz/final-project",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "settings.editor.selected.configurable": "google.protobuf.language"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/go-pbtype" />
       <recent name="$PROJECT_DIR$/backend/pbtype" />
       <recent name="$PROJECT_DIR$/backend/user/cmd" />
       <recent name="$PROJECT_DIR$/backend/used-service/cmd" />
       <recent name="$PROJECT_DIR$/backend/service/cmd" />
-      <recent name="$PROJECT_DIR$/backend/room/cmd" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/backend" />

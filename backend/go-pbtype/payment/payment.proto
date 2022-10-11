@@ -1,0 +1,86 @@
+syntax = "proto3";
+
+package payment;
+
+option go_package = "github.com/nekizz/final-project/backend/go-pbtype/payment";
+
+import "github.com/gogo/protobuf/gogoproto/gogo.proto";
+import "google/protobuf/empty.proto";
+import "google/api/annotations.proto";
+
+
+// Enable custom Marshal method.
+option (gogoproto.marshaler_all) = true;
+// Enable custom Unmarshal method.
+option (gogoproto.unmarshaler_all) = true;
+// Enable custom Size method (Required by Marshal and Unmarshal).
+option (gogoproto.sizer_all) = true;
+// Enable registration with golang/protobuf for the grpc-gateway.
+option (gogoproto.goproto_registration) = true;
+// Enable generation of XXX_MessageName methods for grpc-go/status.
+option (gogoproto.messagename_all) = true;
+
+message Payment {
+  string id = 1;
+  string payment_type = 2;
+  string payment_date = 3;
+  string payment_status =4;
+  string note = 5;
+
+  string created_at = 20;
+  string updated_at = 21;
+}
+
+message OnePaymentRequest {
+  string id = 1;
+}
+
+message ListPaymentRequest {
+  uint32 page = 3;
+  uint32 limit = 4;
+  string created_at_min = 5;
+  string created_at_max = 6;
+  string search_field = 7;
+  string search_value = 8;
+}
+
+message ListPaymentResponse {
+  repeated Payment items = 1;
+  uint32 max_page = 2;
+  uint32 total_count = 3;
+  uint32 page = 4;
+  uint32 limit = 5;
+  string search_field = 6;
+  string search_value = 7;
+}
+
+service PaymentService {
+  rpc Create(Payment) returns (Payment) {
+    option (google.api.http) = {
+      post: "/payment"
+      body: "*"
+    };
+  };
+
+  rpc Update(Payment) returns (Payment) {
+    option (google.api.http) = {
+      put: "/payment/{id}"
+      body: "*"
+    };
+  };
+  rpc Get(OnePaymentRequest) returns (Payment) {
+    option (google.api.http) = {
+      get: "/payment/{id}"
+    };
+  };
+  rpc List(ListPaymentRequest) returns (ListPaymentResponse) {
+    option (google.api.http) = {
+      get: "/payments"
+    };
+  };
+  rpc Delete(OnePaymentRequest) returns (google.protobuf.Empty) {
+    option (google.api.http) = {
+      delete: "/payment/{id}"
+    };
+  };
+}

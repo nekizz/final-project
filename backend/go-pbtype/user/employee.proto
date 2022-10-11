@@ -1,0 +1,85 @@
+syntax = "proto3";
+
+package employee;
+
+option go_package = "github.com/nekizz/final-project/backend/go-pbtype/user";
+
+import "github.com/gogo/protobuf/gogoproto/gogo.proto";
+import "google/protobuf/empty.proto";
+import "google/api/annotations.proto";
+
+
+// Enable custom Marshal method.
+option (gogoproto.marshaler_all) = true;
+// Enable custom Unmarshal method.
+option (gogoproto.unmarshaler_all) = true;
+// Enable custom Size method (Required by Marshal and Unmarshal).
+option (gogoproto.sizer_all) = true;
+// Enable registration with golang/protobuf for the grpc-gateway.
+option (gogoproto.goproto_registration) = true;
+// Enable generation of XXX_MessageName methods for grpc-go/status.
+option (gogoproto.messagename_all) = true;
+
+message Employee {
+  string id = 1;
+  string role = 2;
+  float salary = 3;
+  string description = 4;
+
+  string created_at = 20;
+  string updated_at = 21;
+}
+
+message OneEmployeeRequest {
+  string id = 1;
+}
+
+message ListEmployeeRequest {
+  uint32 page = 3;
+  uint32 limit = 4;
+  string created_at_min = 5;
+  string created_at_max = 6;
+  string search_field = 7;
+  string search_value = 8;
+}
+
+message ListEmployeeResponse {
+  repeated Employee items = 1;
+  uint32 max_page = 2;
+  uint32 total_count = 3;
+  uint32 page = 4;
+  uint32 limit = 5;
+  string search_field = 6;
+  string search_value = 7;
+}
+
+service EmployeeService {
+  rpc Create(Employee) returns (Employee) {
+    option (google.api.http) = {
+      post: "/employee"
+      body: "*"
+    };
+  };
+
+  rpc Update(Employee) returns (Employee) {
+    option (google.api.http) = {
+      put: "/employee/{id}"
+      body: "*"
+    };
+  };
+  rpc Get(OneEmployeeRequest) returns (Employee) {
+    option (google.api.http) = {
+      get: "/employee/{id}"
+    };
+  };
+  rpc List(ListEmployeeRequest) returns (ListEmployeeResponse) {
+    option (google.api.http) = {
+      get: "/employees"
+    };
+  };
+  rpc Delete(OneEmployeeRequest) returns (google.protobuf.Empty) {
+    option (google.api.http) = {
+      delete: "/employee/{id}"
+    };
+  };
+}

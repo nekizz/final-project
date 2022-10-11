@@ -1,8 +1,8 @@
 syntax = "proto3";
 
-package account;
+package bookedroom;
 
-option go_package = "github.com/nekizz/final-project/backend/go-pbtype/account";
+option go_package = "github.com/nekizz/final-project/backend/go-pbtype/booked-room";
 
 import "github.com/gogo/protobuf/gogoproto/gogo.proto";
 import "google/protobuf/empty.proto";
@@ -20,21 +20,23 @@ option (gogoproto.goproto_registration) = true;
 // Enable generation of XXX_MessageName methods for grpc-go/status.
 option (gogoproto.messagename_all) = true;
 
-message Account {
+message BookedRoom {
   string id = 1;
-  string username = 2;
-  string password = 3;
-  string token = 4;
+  string checkin = 2;
+  string checkout = 3;
+  float price = 4;
+  float discount = 5;
+  bool is_checkin = 6;
 
   string created_at = 20;
   string updated_at = 21;
 }
 
-message OneAccountRequest {
+message OneBookedRoomRequest {
   string id = 1;
 }
 
-message ListAcountRequest {
+message ListBookedRoomRequest {
   uint32 page = 3;
   uint32 limit = 4;
   string created_at_min = 5;
@@ -43,8 +45,8 @@ message ListAcountRequest {
   string search_value = 8;
 }
 
-message ListAccountResponse {
-  repeated Account items = 1;
+message ListBookedRoomResponse {
+  repeated BookedRoom items = 1;
   uint32 max_page = 2;
   uint32 total_count = 3;
   uint32 page = 4;
@@ -53,33 +55,33 @@ message ListAccountResponse {
   string search_value = 7;
 }
 
-service AccountService {
-  rpc Create(Account) returns (Account) {
+service BillService {
+  rpc Create(BookedRoom) returns (BookedRoom) {
     option (google.api.http) = {
-      post: "/account"
+      post: "/bookedroom"
       body: "*"
     };
   };
 
-  rpc Update(Account) returns (Account) {
+  rpc Update(BookedRoom) returns (BookedRoom) {
     option (google.api.http) = {
-      put: "/account/{id}"
+      put: "/bookedroom/{id}"
       body: "*"
     };
   };
-  rpc Get(OneAccountRequest) returns (Account) {
+  rpc Get(OneBookedRoomRequest) returns (BookedRoom) {
     option (google.api.http) = {
-      get: "/account/{id}"
+      get: "/bookedroom/{id}"
     };
   };
-  rpc List(ListAcountRequest) returns (ListAccountResponse) {
+  rpc List(ListBookedRoomRequest) returns (ListBookedRoomResponse) {
     option (google.api.http) = {
-      get: "/accounts"
+      get: "/bookedrooms"
     };
   };
-  rpc Delete(OneAccountRequest) returns (google.protobuf.Empty) {
+  rpc Delete(OneBookedRoomRequest) returns (google.protobuf.Empty) {
     option (google.api.http) = {
-      delete: "/account/{id}"
+      delete: "/bookedroom/{id}"
     };
   };
 }

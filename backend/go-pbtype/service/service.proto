@@ -1,0 +1,85 @@
+syntax = "proto3";
+
+package service;
+
+option go_package = "github.com/nekizz/final-project/backend/go-pbtype/service";
+
+import "github.com/gogo/protobuf/gogoproto/gogo.proto";
+import "google/protobuf/empty.proto";
+import "google/api/annotations.proto";
+
+
+// Enable custom Marshal method.
+option (gogoproto.marshaler_all) = true;
+// Enable custom Unmarshal method.
+option (gogoproto.unmarshaler_all) = true;
+// Enable custom Size method (Required by Marshal and Unmarshal).
+option (gogoproto.sizer_all) = true;
+// Enable registration with golang/protobuf for the grpc-gateway.
+option (gogoproto.goproto_registration) = true;
+// Enable generation of XXX_MessageName methods for grpc-go/status.
+option (gogoproto.messagename_all) = true;
+
+message Service {
+  string id = 1;
+  string name = 2;
+  string unity = 3;
+  float price = 4;
+
+  string created_at = 20;
+  string updated_at = 21;
+}
+
+message OneServiceRequest {
+  string id = 1;
+}
+
+message ListServiceRequest {
+  uint32 page = 3;
+  uint32 limit = 4;
+  string created_at_min = 5;
+  string created_at_max = 6;
+  string search_field = 7;
+  string search_value = 8;
+}
+
+message ListSerivceResponse {
+  repeated Service items = 1;
+  uint32 max_page = 2;
+  uint32 total_count = 3;
+  uint32 page = 4;
+  uint32 limit = 5;
+  string search_field = 6;
+  string search_value = 7;
+}
+
+service ServiceService {
+  rpc Create(Service) returns (Service) {
+    option (google.api.http) = {
+      post: "/service"
+      body: "*"
+    };
+  };
+
+  rpc Update(Service) returns (Service) {
+    option (google.api.http) = {
+      put: "/service/{id}"
+      body: "*"
+    };
+  };
+  rpc Get(OneServiceRequest) returns (Service) {
+    option (google.api.http) = {
+      get: "/service/{id}"
+    };
+  };
+  rpc List(ListServiceRequest) returns (ListSerivceResponse) {
+    option (google.api.http) = {
+      get: "/services"
+    };
+  };
+  rpc Delete(OneServiceRequest) returns (google.protobuf.Empty) {
+    option (google.api.http) = {
+      delete: "/service/{id}"
+    };
+  };
+}

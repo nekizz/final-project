@@ -1,4 +1,4 @@
-module github.com/n3kizz/final-project/backend/payment
+module github.com/nekizz/final-project/backend/payment
 
 go 1.14
 

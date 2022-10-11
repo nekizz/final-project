@@ -1,4 +1,4 @@
-module github.com/n3kizz/final-project/backend/service
+module github.com/nekizz/final-project/backend/service
 
 go 1.14
 

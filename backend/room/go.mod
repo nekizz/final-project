@@ -1,4 +1,4 @@
-module github.com/n3kizz/final-project/backend/room
+module github.com/nekizz/final-project/backend/room
 
 go 1.14
 

@@ -1,4 +1,4 @@
-module whislist
+module github.com/nekizz/final-project/backend/whislist
 
 go 1.14
 

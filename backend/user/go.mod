@@ -1,4 +1,4 @@
-module github.com/n3kizz/final-project/backend/user
+module github.com/nekizz/final-project/backend/user
 
 go 1.14
 

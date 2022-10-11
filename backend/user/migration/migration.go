@@ -2,7 +2,7 @@ package migration
 
 import (
 	"github.com/go-gormigrate/gormigrate/v2"
-	"github.com/n3kizz/final-project/backend/user/migration/versions"
+	"github.com/nekizz/final-project/backend/user/migration/versions"
 	"gorm.io/gorm"
 )
 

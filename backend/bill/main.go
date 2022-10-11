@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/n3kizz/final-project/backend/bill/cmd"
+	"github.com/nekizz/final-project/backend/bill/cmd"
 )
 
 func main() {

@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/n3kizz/final-project/backend/user/cmd"
+	"github.com/nekizz/final-project/backend/user/cmd"
 )
 
 func main() {

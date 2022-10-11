@@ -1,6 +1,6 @@
-module github.com/n3kizz/final-project/backend/bill
+module github.com/nekizz/final-project/backend/bill
 
-go 1.14
+go 1.18
 
 require (
 	github.com/dinhtp/lets-go-company v0.0.0-20220726110114-1b63b6ca52be
@@ -10,8 +10,8 @@ require (
 	github.com/mitchellh/go-homedir v1.1.0
 	github.com/sirupsen/logrus v1.9.0
 	github.com/spf13/cobra v1.5.0
-	github.com/spf13/viper v1.12.0
-	google.golang.org/grpc v1.48.0
-	gorm.io/driver/mysql v1.3.6
-	gorm.io/gorm v1.23.8
+	github.com/spf13/viper v1.13.0
+	google.golang.org/grpc v1.50.0
+	gorm.io/driver/mysql v1.4.1
+	gorm.io/gorm v1.24.0
 )

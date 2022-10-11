@@ -1,8 +1,6 @@
-module github.com/n3kizz/final-project/backend/account
+module github.com/nekizz/final-project/backend/account
 
 go 1.14
-
-replace github.com/n3kizz/final-project/backend/pbtype => ../pbtype
 
 require (
 	github.com/dinhtp/lets-go-company v0.0.0-20220726110114-1b63b6ca52be

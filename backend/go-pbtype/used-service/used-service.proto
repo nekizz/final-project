@@ -1,8 +1,8 @@
 syntax = "proto3";
 
-package customer;
+package service;
 
-option go_package = "github.com/nekizz/final-project/backend/go-pbtype/user";
+option go_package = "github.com/nekizz/final-project/backend/go-pbtype/used-service";
 
 import "github.com/gogo/protobuf/gogoproto/gogo.proto";
 import "google/protobuf/empty.proto";
@@ -20,20 +20,21 @@ option (gogoproto.goproto_registration) = true;
 // Enable generation of XXX_MessageName methods for grpc-go/status.
 option (gogoproto.messagename_all) = true;
 
-message Customer {
+message UsedService {
   string id = 1;
-  string role = 2;
-  string description = 4;
+  int32 quantity = 2;
+  float total_amount = 3;
+  float price = 4;
 
   string created_at = 20;
   string updated_at = 21;
 }
 
-message OneCustomerRequest {
+message OneUsedServiceRequest {
   string id = 1;
 }
 
-message ListCustomerRequest {
+message ListUsedServiceRequest {
   uint32 page = 3;
   uint32 limit = 4;
   string created_at_min = 5;
@@ -42,8 +43,8 @@ message ListCustomerRequest {
   string search_value = 8;
 }
 
-message ListCustomerResponse {
-  repeated Customer items = 1;
+message ListUsedServiceResponse {
+  repeated UsedService items = 1;
   uint32 max_page = 2;
   uint32 total_count = 3;
   uint32 page = 4;
@@ -52,33 +53,33 @@ message ListCustomerResponse {
   string search_value = 7;
 }
 
-service CustomerService {
-  rpc Create(Customer) returns (Customer) {
+service ServiceService {
+  rpc Create(UsedService) returns (UsedService) {
     option (google.api.http) = {
-      post: "/customer"
+      post: "/used-service"
       body: "*"
     };
   };
 
-  rpc Update(Customer) returns (Customer) {
+  rpc Update(UsedService) returns (UsedService) {
     option (google.api.http) = {
-      put: "/customer/{id}"
+      put: "/used-service/{id}"
       body: "*"
     };
   };
-  rpc Get(OneCustomerRequest) returns (Customer) {
+  rpc Get(OneUsedServiceRequest) returns (UsedService) {
     option (google.api.http) = {
-      get: "/customer/{id}"
+      get: "/used-service/{id}"
     };
   };
-  rpc List(ListCustomerRequest) returns (ListcustomerResponse) {
+  rpc List(ListUsedServiceRequest) returns (ListUsedServiceResponse) {
     option (google.api.http) = {
-      get: "/customers"
+      get: "/used-services"
     };
   };
-  rpc Delete(OneCustomerRequest) returns (google.protobuf.Empty) {
+  rpc Delete(OneUsedServiceRequest) returns (google.protobuf.Empty) {
     option (google.api.http) = {
-      delete: "/customer/{id}"
+      delete: "/used-service/{id}"
     };
   };
 }

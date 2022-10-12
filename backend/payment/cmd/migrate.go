@@ -10,7 +10,7 @@ import (
 	"github.com/spf13/viper"
 	"gorm.io/driver/mysql"
 
-	"github.com/dinhtp/lets-go-company/migration"
+	"github.com/nekizz/final-project/backend/payment/migration"
 )
 
 var migrateCmd = &cobra.Command{

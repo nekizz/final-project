@@ -9,6 +9,7 @@ require (
 	github.com/go-sql-driver/mysql v1.6.0
 	github.com/grpc-ecosystem/grpc-gateway v1.16.0
 	github.com/mitchellh/go-homedir v1.1.0
+	github.com/nekizz/final-project/backend/go-pbtype v0.0.0-20221012040806-d8841d677437
 	github.com/sirupsen/logrus v1.9.0
 	github.com/spf13/cobra v1.5.0
 	github.com/spf13/viper v1.12.0

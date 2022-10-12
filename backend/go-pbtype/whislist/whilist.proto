@@ -1,8 +1,8 @@
 syntax = "proto3";
 
-package customer;
+package whislist;
 
-option go_package = "github.com/nekizz/final-project/backend/go-pbtype/user";
+option go_package = "github.com/nekizz/final-project/backend/go-pbtype/whislist";
 
 import "github.com/gogo/protobuf/gogoproto/gogo.proto";
 import "google/protobuf/empty.proto";
@@ -20,7 +20,7 @@ option (gogoproto.goproto_registration) = true;
 // Enable generation of XXX_MessageName methods for grpc-go/status.
 option (gogoproto.messagename_all) = true;
 
-message Customer {
+message Whislist {
   string id = 1;
   string role = 2;
   string description = 4;

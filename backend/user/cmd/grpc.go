@@ -17,8 +17,10 @@ import (
 	"google.golang.org/grpc"
 	"gorm.io/driver/mysql"
 
-	"github.com/dinhtp/lets-go-company/company"
-	pb "github.com/dinhtp/lets-go-pbtype/company"
+	pb "github.com/nekizz/final-project/backend/go-pbtype/user"
+	"github.com/nekizz/final-project/backend/user/customer"
+	"github.com/nekizz/final-project/backend/user/employee"
+	"github.com/nekizz/final-project/backend/user/user"
 )
 
 var grpcCmd = &cobra.Command{
@@ -105,8 +107,14 @@ func initializeDbConnection(mysqlDsnField string, c chan os.Signal, mysqlChan ch
 }
 
 func initializeServices(orm *gorm.DB, grpcServer *grpc.Server) *grpc.Server {
-	companyService := company.NewService(orm)
-	pb.RegisterCompanyServiceServer(grpcServer, companyService)
+	userService := user.NewService(orm)
+	pb.RegisterUserServiceServer(grpcServer, userService)
+
+	employeeService := employee.NewService(orm)
+	pb.RegisterEmployeeServiceServer(grpcServer, employeeService)
+
+	customerService := customer.NewService(orm)
+	pb.RegisterCustomerServiceServer(grpcServer, customerService)
 
 	return grpcServer
 }

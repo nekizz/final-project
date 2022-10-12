@@ -8,9 +8,9 @@ import (
 
 var migrationCmd = &cobra.Command{
 	Use:   "migration",
-	Short: "bookedroom service migration command",
+	Short: "booked-room service migration command",
 	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println("bookedroom service migration command called")
+		fmt.Println("booked-room service migration command called")
 	},
 }
 

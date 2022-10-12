@@ -5,9 +5,11 @@ go 1.18
 require (
 	github.com/dinhtp/lets-go-company v0.0.0-20220726110114-1b63b6ca52be
 	github.com/dinhtp/lets-go-pbtype v0.0.0-20220124151340-136db9ab4e7f
+	github.com/go-gormigrate/gormigrate/v2 v2.0.0
 	github.com/go-sql-driver/mysql v1.6.0
 	github.com/grpc-ecosystem/grpc-gateway v1.16.0
 	github.com/mitchellh/go-homedir v1.1.0
+	github.com/nekizz/final-project/backend/go-pbtype v0.0.0-20221011171701-868507bcefd3
 	github.com/sirupsen/logrus v1.9.0
 	github.com/spf13/cobra v1.5.0
 	github.com/spf13/viper v1.13.0
@@ -17,9 +19,7 @@ require (
 )
 
 require (
-	github.com/bxcodec/faker/v3 v3.6.0 // indirect
 	github.com/fsnotify/fsnotify v1.5.4 // indirect
-	github.com/go-gormigrate/gormigrate/v2 v2.0.0 // indirect
 	github.com/gogo/googleapis v1.4.1 // indirect
 	github.com/gogo/protobuf v1.3.2 // indirect
 	github.com/golang/protobuf v1.5.2 // indirect

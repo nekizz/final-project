@@ -15,7 +15,7 @@ import (
 	"github.com/spf13/viper"
 	"google.golang.org/grpc"
 
-	pb "github.com/dinhtp/lets-go-pbtype/company"
+	pb "github.com/nekizz/final-project/backend/go-pbtype/booking"
 )
 
 var restCmd = &cobra.Command{
@@ -82,7 +82,7 @@ func runRestCommand(cmd *cobra.Command, args []string) {
 }
 
 func initializeGatewayService(ctx context.Context, gw *runtime.ServeMux, endpoint string, opts []grpc.DialOption) {
-	companyGwErr := pb.RegisterCompanyServiceHandlerFromEndpoint(ctx, gw, endpoint, opts)
+	companyGwErr := pb.RegisterBillServiceHandlerFromEndpoint(ctx, gw, endpoint, opts)
 	if nil != companyGwErr {
 		fmt.Println(companyGwErr)
 		os.Exit(1)

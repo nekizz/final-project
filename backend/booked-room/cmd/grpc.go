@@ -3,6 +3,7 @@ package cmd
 import (
 	"context"
 	"fmt"
+	booked_room "github.com/nekizz/final-project/backend/booked-room/booked-room"
 	"gorm.io/gorm"
 	"net"
 	"os"
@@ -17,13 +18,12 @@ import (
 	"google.golang.org/grpc"
 	"gorm.io/driver/mysql"
 
-	"github.com/dinhtp/lets-go-company/company"
-	pb "github.com/dinhtp/lets-go-pbtype/company"
+	pb "github.com/nekizz/final-project/backend/go-pbtype/booked-room"
 )
 
 var grpcCmd = &cobra.Command{
 	Use:   "grpc",
-	Short: "bookedroom service serve grpc command",
+	Short: "booked-room service serve grpc command",
 	Run:   runGrpcCommand,
 }
 
@@ -67,18 +67,18 @@ func runGrpcCommand(cmd *cobra.Command, args []string) {
 	}()
 
 	logrus.WithFields(logrus.Fields{
-		"service": "bookedroom",
+		"service": "booked-room",
 		"type":    "grpc",
-	}).Info("bookedroom service server started")
+	}).Info("booked-room service server started")
 
 	<-c
 	ctx, cancel := context.WithCancel(ctx)
 	defer cancel()
 
 	logrus.WithFields(logrus.Fields{
-		"service": "bookedroom-service",
+		"service": "booked-room-service",
 		"type":    "grpc",
-	}).Info("bookedroom service gracefully shutdowns")
+	}).Info("booked-room service gracefully shutdowns")
 
 }
 
@@ -105,8 +105,8 @@ func initializeDbConnection(mysqlDsnField string, c chan os.Signal, mysqlChan ch
 }
 
 func initializeServices(orm *gorm.DB, grpcServer *grpc.Server) *grpc.Server {
-	companyService := company.NewService(orm)
-	pb.RegisterCompanyServiceServer(grpcServer, companyService)
+	bookedroomService := booked_room.NewService(orm)
+	pb.RegisterBillServiceServer(grpcServer, bookedroomService)
 
 	return grpcServer
 }

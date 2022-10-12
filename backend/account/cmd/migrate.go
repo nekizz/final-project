@@ -2,7 +2,7 @@ package cmd
 
 import (
 	"fmt"
-	"github.com/dinhtp/lets-go-company/migration"
+	"github.com/nekizz/final-project/backend/account/migration"
 	"gorm.io/gorm"
 	"os"
 	"time"

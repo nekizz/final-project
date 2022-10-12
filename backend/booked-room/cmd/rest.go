@@ -15,12 +15,12 @@ import (
 	"github.com/spf13/viper"
 	"google.golang.org/grpc"
 
-	pb "github.com/dinhtp/lets-go-pbtype/company"
+	pb "github.com/nekizz/final-project/backend/go-pbtype/booked-room"
 )
 
 var restCmd = &cobra.Command{
 	Use:   "rest",
-	Short: "bookedroom service serve rest command",
+	Short: "booked-room service serve rest command",
 	Run:   runRestCommand,
 }
 
@@ -67,24 +67,24 @@ func runRestCommand(cmd *cobra.Command, args []string) {
 	}()
 
 	logrus.WithFields(logrus.Fields{
-		"service": "bookedroom-service",
+		"service": "booked-room-service",
 		"type":    "rest",
-	}).Info("bookedroom service server started")
+	}).Info("booked-room service server started")
 
 	<-c
 	ctx, cancel := context.WithCancel(ctx)
 	defer cancel()
 
 	logrus.WithFields(logrus.Fields{
-		"service": "bookedroom-service",
+		"service": "booked-room-service",
 		"type":    "rest",
-	}).Info("bookedroom service gracefully shutdowns")
+	}).Info("booked-room service gracefully shutdowns")
 }
 
 func initializeGatewayService(ctx context.Context, gw *runtime.ServeMux, endpoint string, opts []grpc.DialOption) {
-	companyGwErr := pb.RegisterCompanyServiceHandlerFromEndpoint(ctx, gw, endpoint, opts)
-	if nil != companyGwErr {
-		fmt.Println(companyGwErr)
+	bookedRoomGwErr := pb.RegisterBillServiceHandlerFromEndpoint(ctx, gw, endpoint, opts)
+	if nil != bookedRoomGwErr {
+		fmt.Println(bookedRoomGwErr)
 		os.Exit(1)
 	}
 }

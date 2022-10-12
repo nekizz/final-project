@@ -10,12 +10,12 @@ import (
 	"github.com/spf13/viper"
 	"gorm.io/driver/mysql"
 
-	"github.com/dinhtp/lets-go-company/migration"
+	"github.com/nekizz/final-project/backend/booked-room/migration"
 )
 
 var migrateCmd = &cobra.Command{
 	Use:   "migrate",
-	Short: "bookedroom service migrate command",
+	Short: "booked-room service migrate command",
 	Run:   runMigrationCommand,
 }
 

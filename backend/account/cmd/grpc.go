@@ -110,3 +110,5 @@ func initializeServices(orm *gorm.DB, grpcServer *grpc.Server) *grpc.Server {
 
 	return grpcServer
 }
+
+//TODO: publish message create user

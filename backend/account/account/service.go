@@ -16,6 +16,15 @@ func NewService(db *gorm.DB) *Service {
 }
 
 func (s Service) Create(ctx context.Context, r *pb.Account) (*pb.Account, error) {
+	if err := validateOne(r); nil != err {
+		return nil, err
+	}
+
+	_, err := NewRepository(s.db).RegistAccount(prepareDataToRequest(r))
+	if err != nil {
+		return &pb.Account{}, err
+	}
+
 	return &pb.Account{}, nil
 }
 

@@ -233,7 +233,7 @@ services:
       - go
 
   ##Used-Service service
-  go-usedservice-rest:
+  go-used-service-rest:
     image: localhost:5000/go-used-service-service:latest
     restart: always
     command: go-used-service-service serve rest

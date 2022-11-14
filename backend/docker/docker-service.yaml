@@ -3,23 +3,23 @@ version: '3.5'
 services:
 
   # Infrastructure services
-  mysql:
-    image: mysql:latest
-    restart: always
-    cap_add:
-      - ALL  # CAP_SYS_NICE
-    volumes:
-      - ./mysql/data:/var/lib/mysql
-    environment:
-      - MYSQL_DATABASE=go
-      - MYSQL_PASSWORD=root
-      - MYSQL_ROOT_PASSWORD=root
-    ports:
-      - '3306:3306'
-    hostname: mysql
-    container_name: mysql
-    networks:
-      - go
+#  mysql:
+#    image: mysql:latest
+#    restart: always
+#    cap_add:
+#      - ALL  # CAP_SYS_NICE
+#    volumes:
+#      - ./mysql/data:/var/lib/mysql
+#    environment:
+#      - MYSQL_DATABASE=go
+#      - MYSQL_PASSWORD=root
+#      - MYSQL_ROOT_PASSWORD=root
+#    ports:
+#      - '3306:3306'
+#    hostname: mysql
+#    container_name: mysql
+#    networks:
+#      - go
 
   phpmyadmin:
     image: phpmyadmin/phpmyadmin

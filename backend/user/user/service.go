@@ -5,6 +5,7 @@ import (
 	"github.com/gogo/protobuf/types"
 	pb "github.com/nekizz/final-project/backend/go-pbtype/user"
 	"gorm.io/gorm"
+	"strconv"
 )
 
 type Service struct {
@@ -16,16 +17,37 @@ func NewService(db *gorm.DB) *Service {
 }
 
 func (s Service) Create(ctx context.Context, r *pb.User) (*pb.User, error) {
+	if err := validateCreate(r); nil != err {
+		return nil, err
+	}
+
+	_, err := NewRepository(s.db).RegistAccount(prepareDataToRequest(r))
+	if err != nil {
+		return &pb.User{}, err
+	}
+
 	return &pb.User{}, nil
 }
 
 func (s Service) Update(ctx context.Context, r *pb.User) (*pb.User, error) {
+	if err := validateUpdate(r); err != nil {
+		return nil, err
+	}
 	return &pb.User{}, nil
 }
 
 func (s Service) Get(ctx context.Context, r *pb.OneUserRequest) (*pb.User, error) {
+	if err := validateOne(r); nil != err {
+		return nil, err
+	}
 
-	return &pb.User{}, nil
+	id, _ := strconv.Atoi(r.GetId())
+	user, err := NewRepository(s.db).GetUser(id)
+	if nil != err {
+		return nil, err
+	}
+
+	return prepareDataToResponse(user), nil
 }
 
 func (s Service) List(ctx context.Context, r *pb.ListUserRequest) (*pb.ListUserResponse, error) {

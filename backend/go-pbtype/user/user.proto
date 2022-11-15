@@ -27,6 +27,10 @@ message User {
   string address = 4;
   string phone = 5;
   string note = 6;
+  string username = 7;
+  string password = 8;
+  string token = 9;
+  string avatar = 10;
 
   string created_at = 20;
   string updated_at = 21;

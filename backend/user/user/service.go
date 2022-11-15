@@ -21,7 +21,7 @@ func (s Service) Create(ctx context.Context, r *pb.User) (*pb.User, error) {
 		return nil, err
 	}
 
-	_, err := NewRepository(s.db).RegistAccount(prepareDataToRequest(r))
+	_, err := NewRepository(s.db).CreateOne(prepareDataToRequest(r))
 	if err != nil {
 		return &pb.User{}, err
 	}
@@ -33,7 +33,13 @@ func (s Service) Update(ctx context.Context, r *pb.User) (*pb.User, error) {
 	if err := validateUpdate(r); err != nil {
 		return nil, err
 	}
-	return &pb.User{}, nil
+
+	id, _ := strconv.Atoi(r.GetId())
+	user, err := NewRepository(s.db).UpdateOne(id, prepareDataToRequest(r))
+	if err != nil {
+		return &pb.User{}, err
+	}
+	return prepareDataToResponse(user), nil
 }
 
 func (s Service) Get(ctx context.Context, r *pb.OneUserRequest) (*pb.User, error) {
@@ -42,7 +48,7 @@ func (s Service) Get(ctx context.Context, r *pb.OneUserRequest) (*pb.User, error
 	}
 
 	id, _ := strconv.Atoi(r.GetId())
-	user, err := NewRepository(s.db).GetUser(id)
+	user, err := NewRepository(s.db).FindOne(id)
 	if nil != err {
 		return nil, err
 	}

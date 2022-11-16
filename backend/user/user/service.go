@@ -71,7 +71,7 @@ func (s Service) List(ctx context.Context, r *pb.ListUserRequest) (*pb.ListUserR
 	errorChanel := make(chan error, 2)
 
 	go func() {
-		company, count, err := NewRepository(s.db).ListAll(r)
+		user, count, err := NewRepository(s.db).ListAll(r)
 		if err != nil {
 			errorChanel <- err
 			userChanel <- nil
@@ -79,7 +79,7 @@ func (s Service) List(ctx context.Context, r *pb.ListUserRequest) (*pb.ListUserR
 			return
 		}
 		errorChanel <- nil
-		userChanel <- company
+		userChanel <- user
 		countChanel <- count
 	}()
 

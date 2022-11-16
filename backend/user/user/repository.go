@@ -1,10 +1,13 @@
 package user
 
 import (
+	"fmt"
+	pb "github.com/nekizz/final-project/backend/go-pbtype/user"
 	"github.com/nekizz/final-project/backend/user/model"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
 	"gorm.io/gorm"
+	"strings"
 )
 
 type Repository struct {
@@ -52,4 +55,53 @@ func (r *Repository) FindOne(id int) (*model.User, error) {
 	}
 
 	return &user, nil
+}
+
+func (r *Repository) ListAll(req *pb.ListUserRequest) ([]*model.User, int64, error) {
+	var count int64
+	var list []*model.User
+
+	sql := ""
+	limit := int(req.GetLimit())
+	offset := limit * int(req.GetPage()-1)
+
+	if req.GetSearchField() != "" && req.GetSearchValue() != "" {
+		searchFields := strings.Split(req.GetSearchField(), ",")
+		searchValue := fmt.Sprintf("'%%%s%%'", req.GetSearchValue())
+
+		for idx, field := range searchFields {
+			if idx == 0 {
+				sql += fmt.Sprintf("%s LIKE %s", field, searchValue)
+				continue
+			}
+			sql += fmt.Sprintf(" OR %s LIKE %s", field, searchValue)
+		}
+	}
+
+	listQuery := r.db.Model(&model.User{}).Select("*").Limit(limit).Offset(offset)
+	countQuery := r.db.Model(&model.User{}).Select("id")
+
+	if sql != "" {
+		countQuery = countQuery.Where(sql)
+		listQuery = listQuery.Where(sql)
+	}
+
+	if err := countQuery.Count(&count).Error; nil != err {
+		return nil, 0, err
+	}
+
+	if err := listQuery.Find(&list).Limit(limit).Offset(offset).Error; nil != err {
+		return nil, 0, err
+	}
+
+	return list, count, nil
+}
+
+func (r *Repository) DeleteOne(id int) error {
+	query := r.db.Delete(&model.User{}, "id = ?", id)
+	if err := query.Error; nil != err {
+		return err
+	}
+
+	return nil
 }

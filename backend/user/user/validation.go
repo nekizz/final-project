@@ -33,6 +33,12 @@ func validateUpdate(e *pb.User) error {
 	//if e.Email == "" && e.Phone == "" && e.Address == "" && e.Avatar == "" && e.Token == "" {
 	//	return status.Error(codes.InvalidArgument, "Change field can't be empty")
 	//}
+	if e.Phone != "" && !ValidPhone(e.Phone) {
+		return status.Error(codes.InvalidArgument, "Wrong type of phone")
+	}
+	if e.Email != "" && !ValidEmail(e.Email) {
+		return status.Error(codes.InvalidArgument, "Wrong type of email")
+	}
 
 	return nil
 }

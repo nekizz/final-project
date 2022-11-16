@@ -4,6 +4,7 @@ import (
 	"context"
 	"github.com/gogo/protobuf/types"
 	pb "github.com/nekizz/final-project/backend/go-pbtype/user"
+	"github.com/nekizz/final-project/backend/user/model"
 	"gorm.io/gorm"
 	"strconv"
 )
@@ -26,6 +27,7 @@ func (s Service) Create(ctx context.Context, r *pb.User) (*pb.User, error) {
 		return &pb.User{}, err
 	}
 
+	//TODO: create customer or employee
 	return &pb.User{}, nil
 }
 
@@ -57,9 +59,66 @@ func (s Service) Get(ctx context.Context, r *pb.OneUserRequest) (*pb.User, error
 }
 
 func (s Service) List(ctx context.Context, r *pb.ListUserRequest) (*pb.ListUserResponse, error) {
-	return &pb.ListUserResponse{}, nil
+	//if err := validateList(r); nil != err {
+	//	return nil, err
+	//}
+
+	var list []*pb.User
+	var fault error
+
+	userChanel := make(chan []*model.User, 1)
+	countChanel := make(chan int64, 1)
+	errorChanel := make(chan error, 2)
+
+	go func() {
+		company, count, err := NewRepository(s.db).ListAll(r)
+		if err != nil {
+			errorChanel <- err
+			userChanel <- nil
+			countChanel <- 0
+			return
+		}
+		errorChanel <- nil
+		userChanel <- company
+		countChanel <- count
+	}()
+
+	for i := 0; i < len(errorChanel); i++ {
+		if err := <-errorChanel; err != nil {
+			fault = err
+		}
+	}
+
+	if nil != fault {
+		return nil, fault
+	}
+
+	user := <-userChanel
+	//count := <-countChanel
+
+	for i := range user {
+		companyData := prepareDataToResponse(user[i])
+		list = append(list, companyData)
+	}
+
+	return &pb.ListUserResponse{
+		Page:        0,
+		Limit:       0,
+		SearchField: "",
+		SearchValue: "",
+	}, nil
 }
 
 func (s Service) Delete(ctx context.Context, r *pb.OneUserRequest) (*types.Empty, error) {
+	if err := validateOne(r); nil != err {
+		return nil, err
+	}
+
+	id, _ := strconv.Atoi(r.GetId())
+	err := NewRepository(s.db).DeleteOne(id)
+	if nil != err {
+		return nil, err
+	}
+
 	return &types.Empty{}, nil
 }

@@ -144,7 +144,7 @@
           "200": {
             "description": "A successful response.",
             "schema": {
-              "$ref": "#/definitions/customerListcustomerResponse"
+              "$ref": "#/definitions/customerListCustomerResponse"
             }
           },
           "default": {
@@ -221,7 +221,7 @@
         }
       }
     },
-    "customerListcustomerResponse": {
+    "customerListCustomerResponse": {
       "type": "object",
       "properties": {
         "items": {

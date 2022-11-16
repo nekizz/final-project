@@ -71,7 +71,7 @@ service CustomerService {
       get: "/customer/{id}"
     };
   };
-  rpc List(ListCustomerRequest) returns (ListcustomerResponse) {
+  rpc List(ListCustomerRequest) returns (ListCustomerResponse) {
     option (google.api.http) = {
       get: "/customers"
     };

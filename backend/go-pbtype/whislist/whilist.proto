@@ -22,18 +22,19 @@ option (gogoproto.messagename_all) = true;
 
 message Whislist {
   string id = 1;
-  string role = 2;
+  string hotel_id = 2;
+  string customer_id = 3;
   string description = 4;
 
   string created_at = 20;
   string updated_at = 21;
 }
 
-message OneCustomerRequest {
+message OneWhislistRequest {
   string id = 1;
 }
 
-message ListCustomerRequest {
+message ListWhislistRequest {
   uint32 page = 3;
   uint32 limit = 4;
   string created_at_min = 5;
@@ -42,8 +43,8 @@ message ListCustomerRequest {
   string search_value = 8;
 }
 
-message ListCustomerResponse {
-  repeated Customer items = 1;
+message ListWhislistResponse {
+  repeated Whislist items = 1;
   uint32 max_page = 2;
   uint32 total_count = 3;
   uint32 page = 4;
@@ -52,33 +53,33 @@ message ListCustomerResponse {
   string search_value = 7;
 }
 
-service CustomerService {
-  rpc Create(Customer) returns (Customer) {
+service WhislistService {
+  rpc Create(Whislist) returns (Whislist) {
     option (google.api.http) = {
-      post: "/customer"
+      post: "/whislist"
       body: "*"
     };
   };
 
-  rpc Update(Customer) returns (Customer) {
+  rpc Update(Whislist) returns (Whislist) {
     option (google.api.http) = {
-      put: "/customer/{id}"
+      put: "/whislist/{id}"
       body: "*"
     };
   };
-  rpc Get(OneCustomerRequest) returns (Customer) {
+  rpc Get(OneWhislistRequest) returns (Whislist) {
     option (google.api.http) = {
-      get: "/customer/{id}"
+      get: "/whislist/{id}"
     };
   };
-  rpc List(ListCustomerRequest) returns (ListcustomerResponse) {
+  rpc List(ListWhislistRequest) returns (ListWhislistResponse) {
     option (google.api.http) = {
-      get: "/customers"
+      get: "/whislists"
     };
   };
-  rpc Delete(OneCustomerRequest) returns (google.protobuf.Empty) {
+  rpc Delete(OneWhislistRequest) returns (google.protobuf.Empty) {
     option (google.api.http) = {
-      delete: "/customer/{id}"
+      delete: "/whislist/{id}"
     };
   };
 }

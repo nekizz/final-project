@@ -1,7 +1,7 @@
 {
   "swagger": "2.0",
   "info": {
-    "title": "user/user.proto",
+    "title": "whislist/whilist.proto",
     "version": "version not set"
   },
   "consumes": [
@@ -11,14 +11,14 @@
     "application/json"
   ],
   "paths": {
-    "/user": {
+    "/whislist": {
       "post": {
-        "operationId": "UserService_Create",
+        "operationId": "WhislistService_Create",
         "responses": {
           "200": {
             "description": "A successful response.",
             "schema": {
-              "$ref": "#/definitions/userUser"
+              "$ref": "#/definitions/whislistWhislist"
             }
           },
           "default": {
@@ -34,23 +34,23 @@
             "in": "body",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/userUser"
+              "$ref": "#/definitions/whislistWhislist"
             }
           }
         ],
         "tags": [
-          "UserService"
+          "WhislistService"
         ]
       }
     },
-    "/user/{id}": {
+    "/whislist/{id}": {
       "get": {
-        "operationId": "UserService_Get",
+        "operationId": "WhislistService_Get",
         "responses": {
           "200": {
             "description": "A successful response.",
             "schema": {
-              "$ref": "#/definitions/userUser"
+              "$ref": "#/definitions/whislistWhislist"
             }
           },
           "default": {
@@ -69,11 +69,11 @@
           }
         ],
         "tags": [
-          "UserService"
+          "WhislistService"
         ]
       },
       "delete": {
-        "operationId": "UserService_Delete",
+        "operationId": "WhislistService_Delete",
         "responses": {
           "200": {
             "description": "A successful response.",
@@ -97,16 +97,16 @@
           }
         ],
         "tags": [
-          "UserService"
+          "WhislistService"
         ]
       },
       "put": {
-        "operationId": "UserService_Update",
+        "operationId": "WhislistService_Update",
         "responses": {
           "200": {
             "description": "A successful response.",
             "schema": {
-              "$ref": "#/definitions/userUser"
+              "$ref": "#/definitions/whislistWhislist"
             }
           },
           "default": {
@@ -128,23 +128,23 @@
             "in": "body",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/userUser"
+              "$ref": "#/definitions/whislistWhislist"
             }
           }
         ],
         "tags": [
-          "UserService"
+          "WhislistService"
         ]
       }
     },
-    "/users": {
+    "/whislists": {
       "get": {
-        "operationId": "UserService_List",
+        "operationId": "WhislistService_List",
         "responses": {
           "200": {
             "description": "A successful response.",
             "schema": {
-              "$ref": "#/definitions/userListUserResponse"
+              "$ref": "#/definitions/whislistListWhislistResponse"
             }
           },
           "default": {
@@ -195,7 +195,7 @@
           }
         ],
         "tags": [
-          "UserService"
+          "WhislistService"
         ]
       }
     }
@@ -234,13 +234,13 @@
         }
       }
     },
-    "userListUserResponse": {
+    "whislistListWhislistResponse": {
       "type": "object",
       "properties": {
         "items": {
           "type": "array",
           "items": {
-            "$ref": "#/definitions/userUser"
+            "$ref": "#/definitions/whislistWhislist"
           }
         },
         "max_page": {
@@ -267,37 +267,19 @@
         }
       }
     },
-    "userUser": {
+    "whislistWhislist": {
       "type": "object",
       "properties": {
         "id": {
           "type": "string"
         },
-        "name": {
+        "hotel_id": {
           "type": "string"
         },
-        "email": {
+        "customer_id": {
           "type": "string"
         },
-        "address": {
-          "type": "string"
-        },
-        "phone": {
-          "type": "string"
-        },
-        "note": {
-          "type": "string"
-        },
-        "username": {
-          "type": "string"
-        },
-        "password": {
-          "type": "string"
-        },
-        "token": {
-          "type": "string"
-        },
-        "avatar": {
+        "description": {
           "type": "string"
         },
         "created_at": {

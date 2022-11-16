@@ -1,7 +1,7 @@
 {
   "swagger": "2.0",
   "info": {
-    "title": "user/user.proto",
+    "title": "used-service/used-service.proto",
     "version": "version not set"
   },
   "consumes": [
@@ -11,14 +11,14 @@
     "application/json"
   ],
   "paths": {
-    "/user": {
+    "/used-service": {
       "post": {
-        "operationId": "UserService_Create",
+        "operationId": "ServiceService_Create",
         "responses": {
           "200": {
             "description": "A successful response.",
             "schema": {
-              "$ref": "#/definitions/userUser"
+              "$ref": "#/definitions/serviceUsedService"
             }
           },
           "default": {
@@ -34,23 +34,23 @@
             "in": "body",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/userUser"
+              "$ref": "#/definitions/serviceUsedService"
             }
           }
         ],
         "tags": [
-          "UserService"
+          "ServiceService"
         ]
       }
     },
-    "/user/{id}": {
+    "/used-service/{id}": {
       "get": {
-        "operationId": "UserService_Get",
+        "operationId": "ServiceService_Get",
         "responses": {
           "200": {
             "description": "A successful response.",
             "schema": {
-              "$ref": "#/definitions/userUser"
+              "$ref": "#/definitions/serviceUsedService"
             }
           },
           "default": {
@@ -69,11 +69,11 @@
           }
         ],
         "tags": [
-          "UserService"
+          "ServiceService"
         ]
       },
       "delete": {
-        "operationId": "UserService_Delete",
+        "operationId": "ServiceService_Delete",
         "responses": {
           "200": {
             "description": "A successful response.",
@@ -97,16 +97,16 @@
           }
         ],
         "tags": [
-          "UserService"
+          "ServiceService"
         ]
       },
       "put": {
-        "operationId": "UserService_Update",
+        "operationId": "ServiceService_Update",
         "responses": {
           "200": {
             "description": "A successful response.",
             "schema": {
-              "$ref": "#/definitions/userUser"
+              "$ref": "#/definitions/serviceUsedService"
             }
           },
           "default": {
@@ -128,23 +128,23 @@
             "in": "body",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/userUser"
+              "$ref": "#/definitions/serviceUsedService"
             }
           }
         ],
         "tags": [
-          "UserService"
+          "ServiceService"
         ]
       }
     },
-    "/users": {
+    "/used-services": {
       "get": {
-        "operationId": "UserService_List",
+        "operationId": "ServiceService_List",
         "responses": {
           "200": {
             "description": "A successful response.",
             "schema": {
-              "$ref": "#/definitions/userListUserResponse"
+              "$ref": "#/definitions/serviceListUsedServiceResponse"
             }
           },
           "default": {
@@ -195,7 +195,7 @@
           }
         ],
         "tags": [
-          "UserService"
+          "ServiceService"
         ]
       }
     }
@@ -234,13 +234,13 @@
         }
       }
     },
-    "userListUserResponse": {
+    "serviceListUsedServiceResponse": {
       "type": "object",
       "properties": {
         "items": {
           "type": "array",
           "items": {
-            "$ref": "#/definitions/userUser"
+            "$ref": "#/definitions/serviceUsedService"
           }
         },
         "max_page": {
@@ -267,38 +267,23 @@
         }
       }
     },
-    "userUser": {
+    "serviceUsedService": {
       "type": "object",
       "properties": {
         "id": {
           "type": "string"
         },
-        "name": {
-          "type": "string"
+        "quantity": {
+          "type": "integer",
+          "format": "int32"
         },
-        "email": {
-          "type": "string"
+        "total_amount": {
+          "type": "number",
+          "format": "float"
         },
-        "address": {
-          "type": "string"
-        },
-        "phone": {
-          "type": "string"
-        },
-        "note": {
-          "type": "string"
-        },
-        "username": {
-          "type": "string"
-        },
-        "password": {
-          "type": "string"
-        },
-        "token": {
-          "type": "string"
-        },
-        "avatar": {
-          "type": "string"
+        "price": {
+          "type": "number",
+          "format": "float"
         },
         "created_at": {
           "type": "string"

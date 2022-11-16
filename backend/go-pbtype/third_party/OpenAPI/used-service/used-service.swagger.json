@@ -285,6 +285,12 @@
           "type": "number",
           "format": "float"
         },
+        "service_id": {
+          "type": "string"
+        },
+        "booked_room_id": {
+          "type": "string"
+        },
         "created_at": {
           "type": "string"
         },

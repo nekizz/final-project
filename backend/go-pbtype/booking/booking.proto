@@ -26,6 +26,8 @@ message Booking {
   float total_amount = 3;
   string note = 4;
   float discount = 5;
+  string customer_id = 6;
+  string payment_id = 7;
 
   string created_at = 20;
   string updated_at = 21;

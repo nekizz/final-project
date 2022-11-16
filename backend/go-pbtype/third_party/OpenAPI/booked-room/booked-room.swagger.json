@@ -224,6 +224,12 @@
         "is_checkin": {
           "type": "boolean"
         },
+        "booking_id": {
+          "type": "string"
+        },
+        "room_id": {
+          "type": "string"
+        },
         "created_at": {
           "type": "string"
         },

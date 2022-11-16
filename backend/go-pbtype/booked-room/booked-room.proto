@@ -27,6 +27,8 @@ message BookedRoom {
   float price = 4;
   float discount = 5;
   bool is_checkin = 6;
+  string booking_id = 7;
+  string room_id = 8;
 
   string created_at = 20;
   string updated_at = 21;

@@ -25,6 +25,8 @@ message UsedService {
   int32 quantity = 2;
   float total_amount = 3;
   float price = 4;
+  string service_id = 5;
+  string booked_room_id = 6;
 
   string created_at = 20;
   string updated_at = 21;

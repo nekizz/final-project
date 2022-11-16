@@ -25,6 +25,9 @@ message Bill {
   float total_amount = 2;
   string note = 3;
   float discount = 4;
+  string booking_id = 5;
+  string employee_id = 6;
+  string payment_id = 7;
 
   string created_at = 20;
   string updated_at = 21;

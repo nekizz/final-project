@@ -28,8 +28,8 @@ func (s Service) Get(ctx context.Context, r *pb.OneCustomerRequest) (*pb.Custome
 	return &pb.Customer{}, nil
 }
 
-func (s Service) List(ctx context.Context, r *pb.ListCustomerRequest) (*pb.ListCustomerResponse, error) {
-	return &pb.ListCustomerResponse{}, nil
+func (s Service) List(ctx context.Context, r *pb.ListCustomerRequest) (*pb.ListcustomerResponse, error) {
+	return &pb.ListcustomerResponse{}, nil
 }
 
 func (s Service) Delete(ctx context.Context, r *pb.OneCustomerRequest) (*types.Empty, error) {

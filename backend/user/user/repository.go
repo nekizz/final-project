@@ -3,6 +3,7 @@ package user
 import (
 	"fmt"
 	pb "github.com/nekizz/final-project/backend/go-pbtype/user"
+	"github.com/nekizz/final-project/backend/user/constant"
 	"github.com/nekizz/final-project/backend/user/model"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
@@ -26,10 +27,41 @@ func (r *Repository) CreateOne(p *model.User) (*model.User, error) {
 		return nil, err
 	}
 	if count == 0 {
-		query = r.db.Model(&model.User{}).Create(p)
+		//init transaction
+		tx := r.db.Begin()
+		query = tx.Model(&model.User{}).Create(p)
 		if err := query.Error; nil != err {
+			tx.Rollback()
 			return nil, err
 		}
+
+		//TODO: pbtype add classify employee or customer
+		var isCustomer bool
+		if isCustomer {
+			queryCustomer := tx.Model(&model.Customer{}).Create(model.Customer{
+				Model:       gorm.Model{},
+				Description: "",
+			})
+			if err := queryCustomer.Error; err != nil {
+				tx.Rollback()
+				return nil, err
+			}
+		}
+
+		queryEmployee := tx.Model(&model.Employee{}).Create(model.Employee{
+			Model:       gorm.Model{},
+			Role:        constant.DefaultRole,
+			Description: "",
+		})
+		if err := queryEmployee.Error; err != nil {
+			tx.Rollback()
+			return nil, err
+		}
+
+		if err := tx.Commit().Error; nil != err {
+			return nil, err
+		}
+
 		return p, nil
 	} else {
 		return &model.User{}, status.Error(codes.InvalidArgument, "This username is already exsist")

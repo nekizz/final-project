@@ -53,13 +53,6 @@ message ListCustomerResponse {
 }
 
 service CustomerService {
-  rpc Create(Customer) returns (Customer) {
-    option (google.api.http) = {
-      post: "/customer"
-      body: "*"
-    };
-  };
-
   rpc Update(Customer) returns (Customer) {
     option (google.api.http) = {
       put: "/customer/{id}"

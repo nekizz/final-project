@@ -27,7 +27,6 @@ func (s Service) Create(ctx context.Context, r *pb.User) (*pb.User, error) {
 		return &pb.User{}, err
 	}
 
-	//TODO: create customer or employee
 	return &pb.User{}, nil
 }
 

@@ -31,6 +31,7 @@ message User {
   string password = 8;
   string token = 9;
   string avatar = 10;
+  bool is_customer = 11;
 
   string created_at = 20;
   string updated_at = 21;
@@ -76,11 +77,6 @@ service UserService {
   rpc Get(OneUserRequest) returns (User) {
     option (google.api.http) = {
       get: "/user/{id}"
-    };
-  };
-  rpc List(ListUserRequest) returns (ListUserResponse) {
-    option (google.api.http) = {
-      get: "/users"
     };
   };
   rpc Delete(OneUserRequest) returns (google.protobuf.Empty) {

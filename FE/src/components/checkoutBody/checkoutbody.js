@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./checkoutbody.module.css";
 import classNames from "classnames/bind";
 import Button from "../Button/Button";
+
 const cx = classNames.bind(styles);
 
 function CheckOutBody() {
@@ -19,7 +20,7 @@ function CheckOutBody() {
         </div>
       </div>
       <div className={cx("more-information")}>
-        <Button primary> hehe</Button>
+        <Button primary>hehe</Button>
       </div>
     </div>
   );

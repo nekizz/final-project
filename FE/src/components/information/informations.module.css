@@ -72,11 +72,9 @@
     height: 60px;
 }
 
-.safety::before {
-    background: transparent;
-}
 
-.city-details__header::before:last-child {
+
+.city-details__header:last-child:before {
     background-color: transparent;
 }
 

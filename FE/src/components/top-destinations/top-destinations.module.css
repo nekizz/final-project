@@ -60,10 +60,10 @@
     transition: .5s ease-out;
 }
 
-.top-destinations-item:hover {
+/* .top-destinations-item:hover {
     transform: rotateY(180deg);
     transform-style: preserve-3d;
-}
+} */
 
 .front,.back {
     height: 100%;

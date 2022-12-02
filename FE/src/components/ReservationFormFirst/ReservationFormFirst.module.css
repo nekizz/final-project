@@ -1,0 +1,22 @@
+.reservation-form-first {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.add {
+    align-self: flex-end;
+    font-size: 14px;
+    font-style: italic;
+    font-weight: 600;
+    color: #363DDC;
+
+    
+}
+
+.reservation-item--container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+}

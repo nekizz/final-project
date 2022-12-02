@@ -9,10 +9,19 @@ function Button({
   href,
   onClick,
   children,
+  small = false,
+  medium = false,
+  large = false,
   primary = false,
   secondary = false,
+  third = false,
+  fourth = false,
+  rounded = false,
+  transparent = false,
+  outline = false,
   leftIcon,
   rightIcon,
+  className,
 }) {
   let Comp = "button";
   const props = { onClick };
@@ -26,8 +35,15 @@ function Button({
   }
 
   const classes = cx("wrapper", {
+    medium,
     primary,
     secondary,
+    third,
+    fourth,
+    rounded,
+    transparent,
+    outline,
+    [className]: className,
   });
 
   return (

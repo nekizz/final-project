@@ -1,0 +1,28 @@
+.search-wrapper {
+    display: flex;
+}
+
+.colleft {
+    flex: 1;
+}
+
+.colright {
+    position: relative;
+}
+
+.square {
+    height: 160px;
+    width: 160px;
+    background-color: #E0E2E6;
+}
+
+.map-center__info {
+    display: flex;
+    width: 80%;
+    position: absolute;
+    top: 423px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+
+}

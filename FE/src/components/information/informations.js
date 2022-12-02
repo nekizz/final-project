@@ -79,7 +79,7 @@ function Informations() {
             <tr>
               <th className={cx("city-details__header")}>City Size</th>
               <th className={cx("city-details__header")}>Weather</th>
-              <th className={cx("city-details__header safety")}>Safety</th>
+              <th className={cx("city-details__header")}>Safety</th>
             </tr>
             <tr>
               <td>

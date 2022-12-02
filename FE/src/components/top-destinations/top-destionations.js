@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./top-destinations.module.css";
 import imga from "../../assets/img/download.jpg";
 import classNames from "classnames/bind";
+import { Link } from "react-router-dom";
 
 const cx = classNames.bind(styles);
 
@@ -41,11 +42,16 @@ function TopDestinations() {
         {topDestinations.map((destination, index) => (
           <div className={cx("top-destinations-item")} key={index}>
             <div className={cx("front")}>
-              <img
-                src={imga}
-                className={cx("top-destinations-item__img")}
-                alt=""
-              />
+              <Link
+                to="/HomeBooking#featured"
+                style={{ width: "100%", height: "100%" }}
+              >
+                <img
+                  src={imga}
+                  className={cx("top-destinations-item__img")}
+                  alt=""
+                />
+              </Link>
               <div className={cx("top-destinations-info")}>
                 <h3 className={cx("top-destinations-state")}>
                   {destination.state}

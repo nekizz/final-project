@@ -96,7 +96,7 @@
 }
 
 .menu-nav__item:last-child .menu-nav__link {
-    background-color: #484848;
+    background-color: var(--secondBlack);
     padding: 14px 29px;
     color: var(--white);
     border-radius: 23px;

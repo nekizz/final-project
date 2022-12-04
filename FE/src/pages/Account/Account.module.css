@@ -27,7 +27,7 @@
     margin-top: -30px;
     font-size: 16px;
     font-weight: 600;
-    color: #484848;
+    color: var(--secondBlack);
 }
 
 .account-verification__container {
@@ -40,7 +40,7 @@
 .account-verification {
     font-size: 18px;
     font-weight: 700;
-    color: #484848;
+    color: var(--secondBlack);
 }
 
 .account-verification__desc {
@@ -57,7 +57,7 @@
 .account-status {
     font-size: 22px;
     font-weight: 700;
-    color: #484848;
+    color: var(--secondBlack);
     margin-bottom: 20px;
 }
 
@@ -115,7 +115,7 @@
     margin-top: 30px;
     font-size: 15px;
     font-weight: 600;
-    color: #484848;
+    color: var(--secondBlack);
     text-decoration: underline;
 }
 

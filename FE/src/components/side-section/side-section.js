@@ -12,7 +12,9 @@ function SideSection({ children, h3, span }) {
         <h3 className={cx("title")}>{h3}</h3>
         <span className={cx("desc")}>{span}</span>
         <br />
-        <Button primary>{children}</Button>
+        <Button medium rounded black>
+          {children}
+        </Button>
       </div>
     </div>
   );

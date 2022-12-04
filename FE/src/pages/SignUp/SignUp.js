@@ -4,6 +4,7 @@ import styles from "./SignUp.module.css";
 import { AiOutlineClose } from "react-icons/ai";
 
 import classNames from "classnames/bind";
+import { Link } from "react-router-dom";
 
 const cx = classNames.bind(styles);
 function SignUp() {
@@ -11,9 +12,9 @@ function SignUp() {
     <div className={cx("sign-up")}>
       <div className={cx("sign-up__top")}>
         <h1 className={cx("heading")}>Sign-Up</h1>
-        <i className={cx("close-icon__container")}>
+        <Link to="/" className={cx("close-icon__container")}>
           <AiOutlineClose />
-        </i>
+        </Link>
       </div>
       <div className={cx("sign-up__intro")}>Let's get you started</div>
       <div className={cx("sign-up__desc")}>Sign up with your information</div>

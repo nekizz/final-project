@@ -1,0 +1,38 @@
+.payment-form {
+
+    background-color: #e0e0e0;
+    height: 247px;
+
+}
+
+.form-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 25px;
+    height: 100%;
+    margin: 20px;
+}
+
+.label {
+    display: flex;
+    gap: 30px;
+    margin: 10px 20px;
+}
+
+.label-desc {
+    width: 20%;
+}
+
+.input {
+    width: 40%;
+    padding: 6px 10px;
+    border-radius: 5px;
+}
+
+.input-select {
+    width: 20%;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px;
+}

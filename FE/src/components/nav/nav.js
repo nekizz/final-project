@@ -45,9 +45,11 @@ function NavBar() {
         <img className={cx("user-avatar")} src={user} alt="hieule" />
       </HeadlessTippy>
 
-      <div className={cx("menu__relocate")}>
-        <span>Relocate</span>
-      </div>
+      <Link to="/">
+        <div className={cx("menu__relocate")}>
+          <span>Relocate</span>
+        </div>
+      </Link>
 
       <ul className={cx("menu-nav")}>
         {navItem.map((item, index) => (

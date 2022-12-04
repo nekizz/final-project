@@ -1,14 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./Reservation.module.css";
 import NavBar from "../../components/nav/nav";
 import Footer from "../../components/footer/footer";
 import ReservationFormFirst from "../../components/ReservationFormFirst/ReservationFormFirst";
-
+import ReservationPaymentMethod from "../../components/ReservationPaymentMethod/ReservationPaymentMethod";
 import classNames from "classnames/bind";
 import Button from "../../components/Button/Button";
 
 const cx = classNames.bind(styles);
 function ReservationForm() {
+  const [checkBill, setCheckBill] = useState(true);
+  const handleSetCheckBill = () => {
+    setCheckBill(!checkBill);
+  };
   return (
     <div className={cx("reservation")}>
       <NavBar />
@@ -18,7 +22,11 @@ function ReservationForm() {
           <Button primary>go to home</Button>
         </div>
         <div className={cx("col-right")}>
-          <ReservationFormFirst />
+          {checkBill ? (
+            <ReservationFormFirst handleSetCheckBill={handleSetCheckBill} />
+          ) : (
+            <ReservationPaymentMethod />
+          )}
         </div>
       </div>
       <Footer />

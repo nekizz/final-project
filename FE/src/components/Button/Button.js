@@ -11,6 +11,7 @@ function Button({
   children,
   small = false,
   medium = false,
+  mediumx = false,
   large = false,
   primary = false,
   secondary = false,
@@ -18,7 +19,10 @@ function Button({
   fourth = false,
   rounded = false,
   transparent = false,
+  black = false,
   outline = false,
+  textBlack = false,
+  backGroundWhite = false,
   leftIcon,
   rightIcon,
   className,
@@ -36,13 +40,18 @@ function Button({
 
   const classes = cx("wrapper", {
     medium,
+    mediumx,
+    large,
     primary,
     secondary,
     third,
     fourth,
     rounded,
+    black,
     transparent,
     outline,
+    textBlack,
+    backGroundWhite,
     [className]: className,
   });
 

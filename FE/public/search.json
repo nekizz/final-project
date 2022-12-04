@@ -1,0 +1,173 @@
+[
+    {
+        "id": "0002",
+        "name": "Wierszyki Shelters",
+        "address": " Droga do Wantuli 10, 34-500 Zakopane, Poland",
+        "prices": [
+            {
+                "id": "1",
+                "name": "short",
+                "price": "$1000"
+            },
+            {
+                "id": "2",
+                "name": "short",
+                "price": "$2000"
+            },
+            {
+                "id": "3",
+                "name": "short",
+                "price": "$2500"
+            }
+        ],
+        "thumbnail": "https://cf.bstatic.com/xdata/images/hotel/square600/280950287.webp?k=b984c542b8b1a2ee0e019e4491da338a85b660caa10c5e1197225c5f3052d629&o=&s=1",
+        "images": [
+            {
+                "id": "01",
+                "img": "https://www.booking.com/hotel/pl/domki-wierszyki.html?aid=304142&label=gen173nr-1FCAEoggI46AdIM1gEaPQBiAEBmAExuAEXyAEV2AEB6AEB-AECiAIBqAIDuAKMzbGcBsACAdICJGVmNzVhZDU5LTUwMzMtNDY3OC05ZTc4LTI3MmMyYTI1M2JiMtgCBeACAQ&ucfs=1&arphpl=1#"
+            },
+            {
+                "id": "02",
+                "img": "https://cf.bstatic.com/xdata/images/hotel/max1280x900/280947647.jpg?k=82bca9093adf74a5cfc632264e96ac79d17f7a1f15eb09d4da844c0242026c06&o=&hp=1"
+            }
+        ],
+        "detail-room": [
+            {
+                "id": "01",
+                "name": "bedroom",
+                "total": "2"
+            },
+            {
+                "id": "02",
+                "name": "bathroom",
+                "total": "1"
+            },
+            {
+                "id": "03",
+                "name": "transport",
+                "type": [
+                    {
+                        "car": "1",
+                        "bike": "2"
+                    }
+                ]
+            }
+        ],
+        "pet": "Pets Allowed",
+        "description": "Located in Zakopane in the Małopolskie region and Tatra National Park reachable within 0.7 miles, Wierszyki Shelters has accommodations with free WiFi, a playground, a garden and free private parking. Each room here will provide you with air conditioning and a private bathroom with a bath or shower and free toiletries. Extras include a desk and ironing facilities.At L'Etape Gasconne you will find a garden and a terrace. Other facilities offered at the property include meeting facilities. Mérignac Airport is 50 mi away. Free public parking is available on site. Couples in particular like the location – they rated it 8.6 for a two-person trip.L'Etape Gasconne has been welcoming Booking.com guests since May 4, 2015"
+    },
+    {
+        "id": "0003",
+        "name": "Amison d'hôtes Aux Deux CigognesOpens",
+        "address": " 1 Rue de Bischwiller, 67240 Gries, France ",
+        "prices": [
+            {
+                "id": "1",
+                "name": "short",
+                "price": "$1200"
+            },
+            {
+                "id": "2",
+                "name": "short",
+                "price": "$2200"
+            },
+            {
+                "id": "3",
+                "name": "short",
+                "price": "$2800"
+            }
+        ],
+        "thumbnail": "https://cf.bstatic.com/xdata/images/hotel/square600/175044451.webp?k=d464ade0cb0b73197bb27e0507b52b9dd01e57de23e1c7ee4d4ae754c8d96137&o=&s=1",
+        "images": [
+            {
+                "id": "01",
+                "img": "https://cf.bstatic.com/xdata/images/hotel/max1280x900/123412334.jpg?k=eada0f6066478577657af3538d299903498973a1ac6c0846b2e4ab1f108caff5&o=&hp=1"
+            },
+            {
+                "id": "02",
+                "img": "https://cf.bstatic.com/xdata/images/hotel/max1280x900/123412561.jpg?k=3684f34f4c4fe9dd1032a9108b52f72ed4c3bedebb427355ba8b1d3296ff8ab1&o=&hp=1"
+            }
+        ],
+        "detail-room": [
+            {
+                "id": "01",
+                "name": "bedroom",
+                "total": "3"
+            },
+            {
+                "id": "02",
+                "name": "bathroom",
+                "total": "2"
+            },
+            {
+                "id": "03",
+                "name": "transport",
+                "type": [
+                    {
+                        "car": "2",
+                        "bike": "3"
+                    }
+                ]
+            }
+        ],
+        "pet": "Pets Allowed",
+        "description": " Chambre d'hôtes aux Deux Cigognes is offering accommodations in Gries. Providing a dining room, the the property offers diner service at an extra cost. A terrace and a relaxation area are available in the property. Free WiFi is available. Free WiFi access is available. Each room here will provide you with air conditioning and a private bathroom with a bath or shower and free toiletries. Extras include a desk and ironing facilities.At L'Etape Gasconne you will find a garden and a terrace. Other facilities offered at the property include meeting facilities. Mérignac Airport is 50 mi away. Free public parking is available on site. Couples in particular like the location – they rated it 8.6 for a two-person trip.L'Etape Gasconne has been welcoming Booking.com guests since May 4, 2015"
+    },
+    {
+        "id": "0003",
+        "name": "wander d'hôtes Aux Deux CigognesOpens",
+        "address": " 1 Rue de Bischwiller, 67240 Gries, France ",
+        "prices": [
+            {
+                "id": "1",
+                "name": "short",
+                "price": "$1200"
+            },
+            {
+                "id": "2",
+                "name": "short",
+                "price": "$2200"
+            },
+            {
+                "id": "3",
+                "name": "short",
+                "price": "$2800"
+            }
+        ],
+        "thumbnail": "https://cf.bstatic.com/xdata/images/hotel/square600/46129592.webp?k=e23728804b1c260cf7c6e8cbc1ee4f917508f462ad3e3839f91a4138b9b2c686&o=&s=1",
+        "images": [
+            {
+                "id": "01",
+                "img": "https://cf.bstatic.com/xdata/images/hotel/max1280x900/123412334.jpg?k=eada0f6066478577657af3538d299903498973a1ac6c0846b2e4ab1f108caff5&o=&hp=1"
+            },
+            {
+                "id": "02",
+                "img": "https://cf.bstatic.com/xdata/images/hotel/max1280x900/123412561.jpg?k=3684f34f4c4fe9dd1032a9108b52f72ed4c3bedebb427355ba8b1d3296ff8ab1&o=&hp=1"
+            }
+        ],
+        "detail-room": [
+            {
+                "id": "01",
+                "name": "bedroom",
+                "total": "3"
+            },
+            {
+                "id": "02",
+                "name": "bathroom",
+                "total": "2"
+            },
+            {
+                "id": "03",
+                "name": "transport",
+                "type": [
+                    {
+                        "car": "2",
+                        "bike": "3"
+                    }
+                ]
+            }
+        ],
+        "pet": "Pets Allowed",
+        "description": " Chambre d'hôtes aux Deux Cigognes is offering accommodations in Gries. Providing a dining room, the the property offers diner service at an extra cost. A terrace and a relaxation area are available in the property. Free WiFi is available. Free WiFi access is available. Each room here will provide you with air conditioning and a private bathroom with a bath or shower and free toiletries. Extras include a desk and ironing facilities.At L'Etape Gasconne you will find a garden and a terrace. Other facilities offered at the property include meeting facilities. Mérignac Airport is 50 mi away. Free public parking is available on site. Couples in particular like the location – they rated it 8.6 for a two-person trip.L'Etape Gasconne has been welcoming Booking.com guests since May 4, 2015"
+    }
+]

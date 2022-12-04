@@ -4,6 +4,7 @@ import styles from "./Search-bar.module.css";
 import { IconContext } from "react-icons";
 import { BsSearch } from "react-icons/bs";
 import classNames from "classnames/bind";
+import { Link } from "react-router-dom";
 const cx = classNames.bind(styles);
 
 function SearchBar() {
@@ -50,7 +51,10 @@ function SearchBar() {
       <div className={cx("search-field")}>
         <div className={cx("search-item")}>
           <span className={cx("search-title")}>Location</span>
-          <span className={cx("search-action")}>Which city do you prefer?</span>
+          <input
+            className={cx("search-action")}
+            placeholder="Which city do you prefer?"
+          />
         </div>
         <div className={cx("search-item")}>
           <span className={cx("search-title")}>Check In</span>
@@ -65,13 +69,15 @@ function SearchBar() {
           <span className={cx("search-action")}>Add Guests</span>
         </div>
 
-        <div className={cx("search-icon__container")}>
-          <IconContext.Provider value={{ color: "#fff", size: "20px" }}>
-            <i className={cx(".search-icon")}>
-              <BsSearch />
-            </i>
-          </IconContext.Provider>
-        </div>
+        <Link to="/Search">
+          <div className={cx("search-icon__container")}>
+            <IconContext.Provider value={{ color: "#fff", size: "20px" }}>
+              <i className={cx(".search-icon")}>
+                <BsSearch />
+              </i>
+            </IconContext.Provider>
+          </div>
+        </Link>
       </div>
     </div>
   );

@@ -13,7 +13,7 @@ const cx = classNames.bind(styles);
 function Search() {
   const [data, setData] = useState([]);
   const handleFetchData = async () => {
-    const response = await axios.get("./hotel.json");
+    const response = await axios.get("./search.json");
     setData(response.data);
   };
   useEffect(() => {
@@ -29,7 +29,13 @@ function Search() {
           <CardList column>
             {data.map((x) => (
               <div key={x.id}>
-                <Card featured mb300 name={x.name} address={x.address}></Card>
+                <Card
+                  featured
+                  mb300
+                  name={x.name}
+                  address={x.address}
+                  thumbnail={x.thumbnail}
+                ></Card>
               </div>
             ))}
           </CardList>

@@ -5,11 +5,14 @@ import { IconContext } from "react-icons";
 import { BsSearch } from "react-icons/bs";
 import classNames from "classnames/bind";
 import { Link } from "react-router-dom";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 const cx = classNames.bind(styles);
 
 function SearchBar() {
   const myObject = ["Rooms", "Flats", "Hostels", "Villas"];
-
+  const [startDate, setStartDate] = useState(new Date());
+  const [endDate, setEndDate] = useState(new Date());
   // const [type, setType] = useState(myObject[0]);
   const [state, changeState] = useState({
     activeObject: myObject[0],
@@ -58,15 +61,26 @@ function SearchBar() {
         </div>
         <div className={cx("search-item")}>
           <span className={cx("search-title")}>Check In</span>
-          <span className={cx("search-action")}>Add Dates</span>
+          <span className={cx("search-action")}>
+            <DatePicker
+              selected={startDate}
+              onChange={(date) => setStartDate(date)}
+            />
+          </span>
         </div>
         <div className={cx("search-item")}>
           <span className={cx("search-title")}>Check Out</span>
-          <span className={cx("search-action")}>Add Dates</span>
+          <span className={cx("search-action")}>
+            <DatePicker
+              selected={endDate}
+              onChange={(date) => setEndDate(date)}
+            />
+          </span>
         </div>
         <div className={cx("search-item")}>
           <span className={cx("search-title")}>Guests</span>
-          <span className={cx("search-action")}>Add Guests</span>
+
+          <input className={cx("search-action")} placeholder="Add guest" />
         </div>
 
         <Link to="/Search">

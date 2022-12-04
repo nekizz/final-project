@@ -66,15 +66,15 @@ function Login1() {
           data rates apply.
         </p>
         <div className={cx("button-container")}>
-          <Button fourth rounded onClick={handleContinue}>
-            Continue
-          </Button>
-          <button type="submit" className={cx("button-email")}>
-            <i className={cx("mail-icon")}>
-              <AiOutlineMail />
-            </i>
-            Continue With Email
-          </button>
+          {!currentAccount ? (
+            <Button fourth rounded onClick={handleContinue}>
+              Continue
+            </Button>
+          ) : (
+            <Button fourth rounded to="/">
+              Continue
+            </Button>
+          )}
         </div>
       </form>
       <div className={cx("login1-alt")}>Or Continue With</div>
@@ -82,9 +82,7 @@ function Login1() {
         <Button leftIcon={<BsFacebook />} fourth rounded medium>
           Facebook
         </Button>
-        <Button leftIcon={<BsApple />} fourth rounded medium>
-          Apple ID
-        </Button>
+
         <Button leftIcon={<BsGoogle />} fourth rounded medium>
           Google
         </Button>

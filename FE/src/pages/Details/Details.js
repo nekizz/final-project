@@ -409,7 +409,7 @@ function Details() {
               <div className={cx("price")}>Medium Period: $ 2000</div>
               <div className={cx("price")}>Long Period: $ 2000</div>
             </div>
-            <Button large black rounded>
+            <Button large black rounded to="/ReservationForm">
               Reserve Now
             </Button>
             <div className={cx("contact")}>

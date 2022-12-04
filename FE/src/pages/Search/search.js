@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import classNames from "classnames/bind";
 import styles from "./Search.module.css";
 
@@ -8,9 +8,18 @@ import Footer from "../../components/footer/footer";
 import CardList from "../../components/CardList/CardList";
 import Card from "../../components/Card/Card";
 
+import axios from "axios";
 const cx = classNames.bind(styles);
-
 function Search() {
+  const [data, setData] = useState([]);
+  const handleFetchData = async () => {
+    const response = await axios.get("./hotel.json");
+    setData(response.data);
+  };
+  useEffect(() => {
+    handleFetchData();
+    // console.log(data);
+  }, []);
   return (
     <div className={cx("search")}>
       <NavBar />
@@ -18,9 +27,11 @@ function Search() {
         <div className={cx("colleft")}>
           <div className={cx("search-result")}>10 result found</div>
           <CardList column>
-            <Card featured mb300></Card>
-            <Card featured mb300></Card>
-            <Card featured mb300></Card>
+            {data.map((x) => (
+              <div key={x.id}>
+                <Card featured mb300 name={x.name} address={x.address}></Card>
+              </div>
+            ))}
           </CardList>
         </div>
         <div className={cx("colright")}>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import classNames from "classnames/bind";
 import styles from "./Home-booking.module.css";
 import Button from "../../components/Button/Button";
@@ -18,27 +18,29 @@ import Footer from "../../components/footer/footer";
 import CardList from "../../components/CardList/CardList";
 import Card from "../../components/Card/Card";
 import SideSection from "../../components/side-section/side-section";
-
+import axios from "axios";
 const cx = classNames.bind(styles);
 function HomeBooking() {
+  const [data, setData] = useState([]);
+  const handleFetchData = async () => {
+    const response = await axios.get("./hotel.json");
+    setData(response.data);
+  };
+  useEffect(() => {
+    handleFetchData();
+    // console.log(data);
+  }, []);
   return (
     <div className="home-booking">
       <NavBar />
       <Banner />
       <SearchBar />
       <CardList desc="Latest on the property listing">
-        <Link to="/Details">
-          <Card />
-        </Link>
-        <Link to="/Details">
-          <Card />
-        </Link>
-        <Link to="/Details">
-          <Card />
-        </Link>
-        <Link to="/Details">
-          <Card />
-        </Link>
+        {data.map((x) => (
+          <Link key={x.id} to="/Details">
+            <Card name={x.name} address={x.address} thumbnail={x.thumbnail} />
+          </Link>
+        ))}
       </CardList>
       <CardList desc="Nearby Listed Properties">
         <Link to="/Details">

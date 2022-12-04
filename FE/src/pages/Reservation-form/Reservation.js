@@ -25,7 +25,7 @@ function ReservationForm() {
           {checkBill ? (
             <ReservationFormFirst handleSetCheckBill={handleSetCheckBill} />
           ) : (
-            <ReservationPaymentMethod />
+            <ReservationPaymentMethod handleSetCheckBill={handleSetCheckBill} />
           )}
         </div>
       </div>

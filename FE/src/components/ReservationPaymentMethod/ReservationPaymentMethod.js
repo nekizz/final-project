@@ -3,13 +3,19 @@ import classNames from "classnames/bind";
 import styles from "./ReservationPaymentMethod.module.css";
 import avatar from "../../assets/img/avatar.jpg";
 import CreditCard from "../CreditCard/CreditCard";
-
+import Button from "../Button/Button";
+import { BiArrowBack } from "react-icons/bi";
+import { AiOutlineArrowRight } from "react-icons/ai";
 const cx = classNames.bind(styles);
 
-function ReservationPaymentMethod() {
+function ReservationPaymentMethod({ handleSetCheckBill }) {
   const [checked, setChecked] = useState(true);
   const handleInputChange = () => {
     setChecked(!checked);
+  };
+
+  const alertT = () => {
+    alert("Successfull Reservation");
   };
 
   return (
@@ -96,6 +102,27 @@ function ReservationPaymentMethod() {
           name="voucher"
         />
       </label>
+      <div className={cx("button-container")}>
+        <Button
+          medium
+          outline
+          rounded
+          textBlack
+          leftIcon={<BiArrowBack />}
+          onClick={handleSetCheckBill}
+        >
+          Back
+        </Button>
+        <Button
+          mediumx
+          outline
+          black
+          rightIcon={<AiOutlineArrowRight />}
+          onClick={alertT}
+        >
+          Continue Booking
+        </Button>
+      </div>
     </div>
   );
 }

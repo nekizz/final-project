@@ -1,9 +1,15 @@
+
+
 .search-wrapper {
     display: flex;
 }
 
 .colleft {
     flex: 1;
+}
+
+.special {
+    color: var(--black);
 }
 
 .colright {

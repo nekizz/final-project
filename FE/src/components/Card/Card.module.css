@@ -8,6 +8,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-color:  #E0E2E6;
+    
     /* overflow: hidden; */
     height: 340px;
     width: 279px;
@@ -113,11 +114,12 @@
 .card-title {
     font-size: 17px;
     font-weight: 700;
+
 }
 
 .card-desc {
     font-size: 13px;
-    font-weight: 500;
+
 }
 
 .star-rated {

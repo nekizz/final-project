@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./Login1.module.css";
 
 import { AiOutlineClose, AiOutlineMail } from "react-icons/ai";
@@ -8,17 +8,30 @@ import avatar from "../../assets/img/avatar.jpg";
 
 import classNames from "classnames/bind";
 import Button from "../../components/Button/Button";
+import { Link } from "react-router-dom";
 
 const cx = classNames.bind(styles);
 function Login1() {
-  const currentAccount = false;
+  const [currentAccount, setCurrentAccout] = useState(false);
+
+  const handleContinue = (e) => {
+    setCurrentAccout(!currentAccount);
+    e.preventDefault();
+  };
+
   return (
     <div className={cx("login")}>
       <div className={cx("login__top")}>
         <h1 className={cx("heading")}>login</h1>
-        <i className={cx("close-icon__container")}>
-          <AiOutlineClose />
-        </i>
+        {currentAccount ? (
+          <i onClick={handleContinue} className={cx("close-icon__container")}>
+            <AiOutlineClose />
+          </i>
+        ) : (
+          <Link to="/" className={cx("close-icon__container")}>
+            <AiOutlineClose />
+          </Link>
+        )}
       </div>
       <form className={cx("login-form")}>
         {currentAccount && (
@@ -53,7 +66,7 @@ function Login1() {
           data rates apply.
         </p>
         <div className={cx("button-container")}>
-          <Button type="submit" fourth rounded>
+          <Button fourth rounded onClick={handleContinue}>
             Continue
           </Button>
           <button type="submit" className={cx("button-email")}>

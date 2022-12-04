@@ -2,7 +2,7 @@ import React from "react";
 import classNames from "classnames/bind";
 import styles from "./Search.module.css";
 
-import avatar from "../../assets/img/avatar.jpg";
+import avatar from "../../assets/img/map.jpg";
 import NavBar from "../../components/nav/nav";
 import Footer from "../../components/footer/footer";
 import CardList from "../../components/CardList/CardList";

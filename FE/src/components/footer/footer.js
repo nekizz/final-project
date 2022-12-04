@@ -28,10 +28,10 @@ function Footer() {
             Lorem isasdfjawepfijwaoidfjaosidjfoiasjdfoiasjdoifjawoijfedoi
           </span>
           <div className={cx("button-container")}>
-            <Button third leftIcon={<IoLogoGooglePlaystore />}>
+            <Button medium third leftIcon={<IoLogoGooglePlaystore />}>
               PlayStore
             </Button>
-            <Button leftIcon={<GrAppleAppStore />} third>
+            <Button medium leftIcon={<GrAppleAppStore />} third>
               AppleStore
             </Button>
           </div>

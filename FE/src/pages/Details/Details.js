@@ -1,6 +1,7 @@
 import React from "react";
 import avatar from "../../assets/img/avatar.jpg";
-
+import map from "../../assets/img/map.jpg";
+import Button from "../../components/Button/Button";
 import NavBar from "../../components/nav/nav";
 import Footer from "../../components/footer/footer";
 import styles from "../Details/Details.module.css";
@@ -145,9 +146,9 @@ function Details() {
               </div>
             </div>
             <div className={cx("show-more__amenitites")}>
-              <button className={cx("amenities-button")}>
+              <Button outline mediumx textBlack backGroundWhite>
                 Show All 10 Amenities
-              </button>
+              </Button>
             </div>
           </div>
           <div className={cx("safety")}>
@@ -180,6 +181,9 @@ function Details() {
                 <p className={cx("safety-name")}>Smoke Detectors</p>
               </div>
             </div>
+          </div>
+          <div className={cx("map-container")}>
+            <img className={cx("map-img")} src={map} alt="hieu" />
           </div>
           <div className={cx("nearby-services__container")}>
             <h2 className={cx("nearby-sevices__heading")}>Nearby Services</h2>
@@ -265,9 +269,14 @@ function Details() {
                 </i>
               </div>
             </div>
-            <button className={cx("nearby-services__button")}>
+            <Button
+              black
+              mediumx
+              rounded
+              className={cx("nearby-services__button")}
+            >
               Show On Map
-            </button>
+            </Button>
           </div>
           <div className={cx("reviews")}>
             <div className={cx("reviews-heading")}>
@@ -380,9 +389,15 @@ function Details() {
               </div>
             </div>
             <div className={cx("reviewers-showmore")}>
-              <button className={cx("reviewers-showmore-button")}>
+              <Button
+                mediumx
+                backGroundWhite
+                outline
+                textBlack
+                className={cx("reviewers-showmore-button")}
+              >
                 Show All 100 Reviews
-              </button>
+              </Button>
             </div>
           </div>
         </div>
@@ -394,7 +409,9 @@ function Details() {
               <div className={cx("price")}>Medium Period: $ 2000</div>
               <div className={cx("price")}>Long Period: $ 2000</div>
             </div>
-            <button className={cx("button-reserve")}>Reserve Now</button>
+            <Button large black rounded>
+              Reserve Now
+            </Button>
             <div className={cx("contact")}>
               <div className={cx("contact-information")}>
                 <div className={cx("contact-name")}>Property Inquiry</div>

@@ -7,6 +7,7 @@ import { IoLogoAndroid, IoLogoApple } from "react-icons/io";
 import { AiOutlineSend } from "react-icons/ai";
 import { IconContext } from "react-icons";
 import avatar from "../../assets/img/avatar.jpg";
+import { Link } from "react-router-dom";
 
 // import SectionHero from "../../components/section-Hero/section-Hero";
 
@@ -26,22 +27,46 @@ function HomeBooking() {
       <Banner />
       <SearchBar />
       <CardList desc="Latest on the property listing">
-        <Card />
-        <Card />
-        <Card />
-        <Card />
+        <Link to="/Details">
+          <Card />
+        </Link>
+        <Link to="/Details">
+          <Card />
+        </Link>
+        <Link to="/Details">
+          <Card />
+        </Link>
+        <Link to="/Details">
+          <Card />
+        </Link>
       </CardList>
       <CardList desc="Nearby Listed Properties">
-        <Card />
-        <Card />
-        <Card />
-        <Card />
+        <Link to="/Details">
+          <Card />
+        </Link>
+        <Link to="/Details">
+          <Card />
+        </Link>
+        <Link to="/Details">
+          <Card />
+        </Link>
+        <Link to="/Details">
+          <Card />
+        </Link>
       </CardList>
       <CardList desc="Top Rated Properties">
-        <Card star />
-        <Card star />
-        <Card star />
-        <Card star />
+        <Link to="/Details">
+          <Card star />
+        </Link>
+        <Link to="/Details">
+          <Card star />
+        </Link>
+        <Link to="/Details">
+          <Card star />
+        </Link>
+        <Link to="/Details">
+          <Card star />
+        </Link>
       </CardList>
       <SideSection
         h3="Try Hosting With Us"
@@ -50,12 +75,24 @@ function HomeBooking() {
         Become A Host
       </SideSection>
       <CardList id="featured" grid desc="Featured Property on our list">
-        <Card featured />
-        <Card featured />
-        <Card featured />
-        <Card featured />
-        <Card featured />
-        <Card featured />
+        <Link to="/Details">
+          <Card featured />
+        </Link>
+        <Link to="/Details">
+          <Card featured />
+        </Link>
+        <Link to="/Details">
+          <Card featured />
+        </Link>
+        <Link to="/Details">
+          <Card featured />
+        </Link>
+        <Link to="/Details">
+          <Card featured />
+        </Link>
+        <Link to="/Details">
+          <Card featured />
+        </Link>
       </CardList>
       <SideSection
         h3="Browse For More Properties"
@@ -73,10 +110,10 @@ function HomeBooking() {
           <h2>Download Our Mobile App</h2>
           <span>Available for free these platforms</span>
           <div className={cx("button-container")}>
-            <Button leftIcon={<IoLogoAndroid />} third>
+            <Button leftIcon={<IoLogoAndroid />} medium third>
               PlayStore
             </Button>
-            <Button leftIcon={<IoLogoApple />} third>
+            <Button leftIcon={<IoLogoApple />} medium third>
               AppleStore
             </Button>
           </div>
@@ -89,14 +126,14 @@ function HomeBooking() {
         <CardList column desc="Discovery More About Property Rental">
           <span>lorem</span>
           <div>
-            <Button primary transparent>
+            <Button medium transparent>
               Ask A Question
             </Button>
-            <Button primary transparent>
+            <Button medium transparent>
               Find A Property
             </Button>
           </div>
-          <Button secondary rounded>
+          <Button medium black rounded className={cx("discovery-more")}>
             Discovery More
           </Button>
         </CardList>

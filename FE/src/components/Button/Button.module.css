@@ -16,8 +16,35 @@
     background-color: var(--black);
     color: var(--white);
 }
+/* size */
+.small {
 
+}
 
+.medium {
+    padding: 17px 29px;
+    width: 172px;
+}
+
+.mediumx {
+    width: 250px;
+    padding: 17px 29px;
+
+}
+
+.large {
+    width: 318px;
+    padding: 22px 50px;
+    margin: 0 30px;
+}
+
+/* end size */
+
+/* color */
+
+.black {
+    background-color: var(--black);
+}
 
 .primary {
     background-color: var(--black);
@@ -26,18 +53,16 @@
 }
 
 .secondary {
-    background-color: #484848;
+    background-color: var(--secondBlack);
     width: 220px;
     height: 60px;
 }
 
 .third {
-    background-color: #E0E2E6;
+    background-color: var(--eoe2e6);
     border-radius: 6px;
-    color: #484848;
-    padding: 17px 39px;
-    font-size: 15px;
-    font-weight: 600;
+    color: var(--secondBlack);
+
 }
 
 .fourth {
@@ -47,7 +72,7 @@
     border-radius: 35px;
     font-size: 15px;
     font-weight: 700;
-    color: #fff;
+    color: var(--white);
 }
 
 .icon + .title, .title + .icon {
@@ -66,18 +91,22 @@
 
 .transparent {
     background-color: transparent;
-    color: #484848;
+    color: var(--secondBlack);
     font-size: 15px;
     font-weight: 700;
+
 }
 
-.medium {
-    width: 160px;
-    background-color: #e8eaec;
-    color: #484848;
-}
 
 .outline {
-    border: 1px solid #484848;
-    width: 150px;
+    border: 1px solid var(--secondBlack);
+    border-radius: 6px;
+}
+
+.textBlack {
+    color: var(--black);
+}
+
+.backGroundWhite {
+    background-color: var(--white);
 }

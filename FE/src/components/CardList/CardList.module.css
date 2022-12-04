@@ -19,7 +19,7 @@
     bottom: -24px;
     width: 140px;
     height: 6px;
-    background: #484848;
+    background: var(--secondBlack);
 
 }
 

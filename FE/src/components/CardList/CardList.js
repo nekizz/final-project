@@ -24,7 +24,7 @@ function CardList({
       {desc && <div className={cx("card-descrition")}>{desc}</div>}
       <div className={classes}>{children}</div>
       {button && (
-        <Button className={cx("custom")} primary>
+        <Button medium black rounded className={cx("custom")}>
           View All Blogs
         </Button>
       )}

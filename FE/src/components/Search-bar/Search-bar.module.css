@@ -5,7 +5,7 @@
     z-index: 1; */
     height: 125px;
     align-items: center;
-    background-color: #D9D9D9;
+    background-color: #d9d9d9;
     margin-top: 20px;
 }
 
@@ -19,12 +19,9 @@
 
 .search-option {
     flex-basis: 30%;
-
-
 }
 
 .option-lists {
-
 }
 
 .option-item {
@@ -36,7 +33,7 @@
 }
 
 .option-item:after {
-    content: "";
+    content: '';
     position: absolute;
     left: 0;
     bottom: -5px;
@@ -45,10 +42,9 @@
     height: 0;
 }
 
-
-.active.option-item:after  {
+.active.option-item:after {
     background-color: var(--secondBlack);
-    width: calc(100%/2);
+    width: calc(100% / 2);
     height: 2px;
 }
 
@@ -68,22 +64,21 @@
     display: flex;
     flex-direction: column;
     position: relative;
-
 }
 
 .search-item::before {
     position: absolute;
-    content: "";
+    content: '';
     height: 30px;
     width: 0.5px;
-    background-color: #DDDDDD;
+    background-color: #dddddd;
     left: -10px;
     top: 50%;
     transform: translateY(-50%);
 }
 
 .search-item:first-child:before {
-    background: transparent ;
+    background: transparent;
 }
 
 .search-title {
@@ -93,12 +88,13 @@
 }
 
 .search-action {
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 600;
     color: #000;
+    font-style: italic;
 }
 
-.search-icon__container{
+.search-icon__container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -107,6 +103,3 @@
     width: 50px;
     border-radius: 50%;
 }
-
-
-

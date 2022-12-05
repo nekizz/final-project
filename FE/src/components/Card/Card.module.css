@@ -7,13 +7,12 @@
     background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
-    background-color:  #E0E2E6;
-    
+    background-color: #e0e2e6;
+
     /* overflow: hidden; */
     height: 340px;
     width: 279px;
     border-radius: 8px;
-
 }
 
 .card-container {
@@ -21,8 +20,6 @@
     bottom: 13px;
     margin-left: 21px;
 }
-
-
 
 .featured {
     width: 100%;
@@ -67,7 +64,7 @@
     margin: 0 21px;
     font-size: 18px;
     font-weight: 600;
-    color: #9A9A9A;
+    color: #9a9a9a;
 }
 
 .circle-wrapper {
@@ -114,12 +111,12 @@
 .card-title {
     font-size: 17px;
     font-weight: 700;
-
+    color: #e0e2e6;
 }
 
 .card-desc {
     font-size: 13px;
-
+    color: #fff;
 }
 
 .star-rated {
@@ -163,7 +160,7 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     font-size: 70px;
     color: #fff;
 }

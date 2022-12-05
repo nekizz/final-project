@@ -1,13 +1,12 @@
-.reservation-payment-method {
+/* .reservation-payment-method {
     background-color: #eff0f2;
-}
+} */
 
 .information {
     display: flex;
     justify-content: space-around;
+    margin-top: 15px;
 }
-
-
 
 .col-2 {
     display: flex;
@@ -41,8 +40,6 @@
     flex-direction: column;
     gap: 5px;
 }
-
-
 
 .information-top {
     display: flex;
@@ -83,6 +80,7 @@
     line-height: 22px;
     letter-spacing: 0em;
     margin-top: 20px;
+    margin-left: 55px;
 }
 
 .checkbox-container {
@@ -109,4 +107,13 @@
     justify-content: center;
     align-items: center;
     gap: 20px;
+}
+.label {
+    margin: 10px 0px 10px 55px;
+}
+.label > input {
+    width: 40%;
+    height: 30px;
+    border-radius: 5px;
+    padding-left: 1%;
 }

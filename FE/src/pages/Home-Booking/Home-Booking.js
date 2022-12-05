@@ -43,32 +43,23 @@ function HomeBooking() {
         ))}
       </CardList>
       <CardList desc="Nearby Listed Properties">
-        <Link to="/Details">
-          <Card />
-        </Link>
-        <Link to="/Details">
-          <Card />
-        </Link>
-        <Link to="/Details">
-          <Card />
-        </Link>
-        <Link to="/Details">
-          <Card />
-        </Link>
+        {data.map((x) => (
+          <Link key={x.id} to="/Details">
+            <Card name={x.name} address={x.address} thumbnail={x.thumbnail} />
+          </Link>
+        ))}
       </CardList>
       <CardList desc="Top Rated Properties">
-        <Link to="/Details">
-          <Card star />
-        </Link>
-        <Link to="/Details">
-          <Card star />
-        </Link>
-        <Link to="/Details">
-          <Card star />
-        </Link>
-        <Link to="/Details">
-          <Card star />
-        </Link>
+        {data.map((x) => (
+          <Link key={x.id} to="/Details">
+            <Card
+              star
+              name={x.name}
+              address={x.address}
+              thumbnail={x.thumbnail}
+            />
+          </Link>
+        ))}
       </CardList>
       <SideSection
         h3="Try Hosting With Us"

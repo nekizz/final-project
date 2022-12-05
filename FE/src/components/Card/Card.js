@@ -97,7 +97,7 @@ function Card({
               <span className={cx("wishlist-desc")}>{desc}</span>
             </div>
           ) : (
-            <div>
+            <div className={cx("background")}>
               <h3 className={cx("card-title")}>{name}</h3>
               <span className={cx("card-desc")}>{address}</span>
             </div>

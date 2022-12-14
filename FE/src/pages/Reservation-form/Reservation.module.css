@@ -1,0 +1,14 @@
+.reservation-container {
+    display: flex;
+    gap: 5px;
+    margin: 30px;
+}
+
+.col-right {
+    width: 70%;
+    background-color: #eff0f2;
+}
+
+.col-left {
+    width: 30%;
+}

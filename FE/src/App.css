@@ -2,8 +2,31 @@
 @import url('http://fonts.cdnfonts.com/css/allison-script');
 
 
+:root {
+    --white: #fff;
+    --black:#000;
+    --primary: #00a77f;
+    --eoe2e6 :#E0E2E6;
+    --secondBlack : #484848;
+    
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+body {
+    text-rendering: optimizeSpeed;
+}
+
+button,input,[tabindex] {
+    outline: none;
+    border: none;
+}
+
+a{
+    color: #333;
+    text-decoration: none;
 }

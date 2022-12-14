@@ -1,0 +1,41 @@
+.wrapper {
+    display: flex;
+    padding-left: 60px;
+    padding-top: 50px;
+}
+
+.card {
+    position: relative;
+    width: 200px;
+    height: 300px;
+}
+
+.card-image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.descriptions {
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--white);
+    font-weight: 300;
+    text-align: center;
+}
+
+.title {
+
+}
+
+.subtitle {
+
+}
+
+
+.more-information {
+    flex: 1;
+}

@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import classNames from "classnames/bind";
 import styles from "./CreditCard.module.css";
-import avatar from "../../assets/img/avatar.jpg";
+
 const cx = classNames.bind(styles);
 
 function CreditCard() {

@@ -4,9 +4,9 @@ import styles from "./ReservationItem.module.css";
 import avatar from "../../assets/img/avatar.jpg";
 const cx = classNames.bind(styles);
 
-function ReservationItem() {
+function ReservationItem({ removeItem, id, item }) {
   const [total, setTotal] = useState(1);
-
+  const { name, address, thumbnail } = item;
   const handleIncrease = () => {
     total < 4 && setTotal((prev) => prev + 1);
   };
@@ -18,10 +18,10 @@ function ReservationItem() {
   return (
     <div className={cx("reservation-item")}>
       <div className={cx("img-container")}>
-        <img className={cx("avatar")} src={avatar} alt="hieu" />
+        <img className={cx("avatar")} src={thumbnail} alt="hieu" />
       </div>
       <div className={cx("item-information")}>
-        <i style={{ textAlign: "end" }}>
+        <i style={{ textAlign: "end" }} onClick={() => removeItem(id)}>
           <svg
             width="26"
             height="22"
@@ -36,8 +36,8 @@ function ReservationItem() {
           </svg>
         </i>
         <div className={cx("item-name-wrapper")}>
-          <h2 className={cx("item-name")}>Fully Furnished Apartment</h2>
-          <p className={cx("item-location")}>100 Smart Street, LA, USA</p>
+          <h2 className={cx("item-name")}>{name}</h2>
+          <p className={cx("item-location")}>{address}</p>
         </div>
         <div className={cx("select-container")}>
           <select className={cx("select")} name="bedroom" id="bedroom">

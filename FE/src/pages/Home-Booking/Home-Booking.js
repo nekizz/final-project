@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import classNames from "classnames/bind";
 import styles from "./Home-booking.module.css";
 import Button from "../../components/Button/Button";
@@ -7,7 +7,6 @@ import { IoLogoAndroid, IoLogoApple } from "react-icons/io";
 import { AiOutlineSend } from "react-icons/ai";
 import { IconContext } from "react-icons";
 import avatar from "../../assets/img/avatar.jpg";
-import { Link } from "react-router-dom";
 
 // import SectionHero from "../../components/section-Hero/section-Hero";
 
@@ -18,18 +17,10 @@ import Footer from "../../components/footer/footer";
 import CardList from "../../components/CardList/CardList";
 import Card from "../../components/Card/Card";
 import SideSection from "../../components/side-section/side-section";
-import axios from "axios";
+
+import data from "../../json/hotel.json";
 const cx = classNames.bind(styles);
-function HomeBooking() {
-  const [data, setData] = useState([]);
-  const handleFetchData = async () => {
-    const response = await axios.get("./hotel.json");
-    setData(response.data);
-  };
-  useEffect(() => {
-    handleFetchData();
-    // console.log(data);
-  }, []);
+function HomeBooking({ handleLike }) {
   return (
     <div className="home-booking">
       <NavBar />
@@ -37,28 +28,39 @@ function HomeBooking() {
       <SearchBar />
       <CardList desc="Latest on the property listing">
         {data.map((x) => (
-          <Link key={x.id} to="/Details">
-            <Card name={x.name} address={x.address} thumbnail={x.thumbnail} />
-          </Link>
+          <Card
+            key={x.id}
+            id={x.id}
+            name={x.name}
+            address={x.address}
+            thumbnail={x.thumbnail}
+            handleLike={handleLike}
+          />
         ))}
       </CardList>
       <CardList desc="Nearby Listed Properties">
         {data.map((x) => (
-          <Link key={x.id} to="/Details">
-            <Card name={x.name} address={x.address} thumbnail={x.thumbnail} />
-          </Link>
+          <Card
+            key={x.id}
+            name={x.name}
+            id={x.id}
+            address={x.address}
+            thumbnail={x.thumbnail}
+            handleLike={handleLike}
+          />
         ))}
       </CardList>
       <CardList desc="Top Rated Properties">
         {data.map((x) => (
-          <Link key={x.id} to="/Details">
-            <Card
-              star
-              name={x.name}
-              address={x.address}
-              thumbnail={x.thumbnail}
-            />
-          </Link>
+          <Card
+            key={x.id}
+            id={x.id}
+            star
+            name={x.name}
+            address={x.address}
+            thumbnail={x.thumbnail}
+            handleLike={handleLike}
+          />
         ))}
       </CardList>
       <SideSection
@@ -68,24 +70,17 @@ function HomeBooking() {
         Become A Host
       </SideSection>
       <CardList id="featured" grid desc="Featured Property on our list">
-        <Link to="/Details">
-          <Card featured />
-        </Link>
-        <Link to="/Details">
-          <Card featured />
-        </Link>
-        <Link to="/Details">
-          <Card featured />
-        </Link>
-        <Link to="/Details">
-          <Card featured />
-        </Link>
-        <Link to="/Details">
-          <Card featured />
-        </Link>
-        <Link to="/Details">
-          <Card featured />
-        </Link>
+        <Card featured />
+
+        <Card featured />
+
+        <Card featured />
+
+        <Card featured />
+
+        <Card featured />
+
+        <Card featured />
       </CardList>
       <SideSection
         h3="Browse For More Properties"

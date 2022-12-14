@@ -9,6 +9,16 @@ import Button from "../Button/Button";
 const cx = classNames.bind(styles);
 
 function ReservationFormFirst({ handleSetCheckBill }) {
+  const [items, setItems] = useState(() => {
+    const storageData = JSON.parse(localStorage.getItem("reservationItem"));
+
+    return storageData ?? [];
+  });
+  const [rooms, setRooms] = useState(() => {
+    const storageRoomsData = JSON.parse(localStorage.getItem("rooms"));
+
+    return storageRoomsData ?? [];
+  });
   const [total, setTotal] = useState(1);
   const [startDate, setStartDate] = useState(new Date());
   const [endDate, setEndDate] = useState(new Date());
@@ -19,13 +29,46 @@ function ReservationFormFirst({ handleSetCheckBill }) {
   const handleDecrease = () => {
     total > 1 && setTotal((prev) => prev - 1);
   };
+
+  const removeItem = (id) => {
+    if (items.length > 0) {
+      const newItems = items.filter((item) => item.id !== id);
+
+      setItems(() => {
+        const jsonData = JSON.stringify(newItems);
+        localStorage.setItem("reservationItem", jsonData);
+        return newItems;
+      });
+    }
+  };
+
+  const addItem = () => {
+    if (items.length > 0) {
+      console.log(items[0].rooms);
+      setRooms((prev) => {
+        const newData = [...prev, items];
+        const jsonNewData = JSON.stringify(newData);
+        localStorage.setItem("rooms", jsonNewData);
+        return newData;
+      });
+    }
+  };
+
   return (
     <div className={cx("reservation-form-first")}>
-      <div className={cx("add")}>Add Room</div>
+      <Button className={cx("add")} medium onClick={addItem}>
+        Add Room
+      </Button>
       <div className={cx("reservation-item--container")}>
-        <ReservationItem />
-        <ReservationItem />
-        <ReservationItem />
+        {items.length > 0 &&
+          items.map((item) => (
+            <ReservationItem
+              id={item.id}
+              key={item.id}
+              item={item}
+              removeItem={removeItem}
+            />
+          ))}
       </div>
       <div className={cx("bill")}>
         <div className={cx("col-3")}>

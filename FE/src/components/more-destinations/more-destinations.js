@@ -1,31 +1,9 @@
 import React from "react";
 import "./more-destinations.css";
-import france from "../../assets/img/download.jpg";
 
-const moreDestinations = [
-  {
-    class: "france",
-    city: "Estaing",
-    state: "France",
-  },
-  {
-    class: "iceland",
-    city: "Vík í Mýrda",
-    state: "iceland",
-  },
-  {
-    class: "norway",
-    city: "Hamnoy village",
-    state: "Norway",
-  },
-  {
-    class: "jamaica",
-    city: "Montego Bay",
-    state: "JAMAICA",
-  },
-];
+import { Link } from "react-router-dom";
 
-function MoreDestinations() {
+function MoreDestinations({ handleData }) {
   return (
     <div className="more-destinations">
       <div className="more-destinations__content">
@@ -39,15 +17,20 @@ function MoreDestinations() {
       </div>
 
       <div className="more-destinations-container">
-        {moreDestinations.map((destination, index) => (
+        {handleData.map((destination, index) => (
           <div
             className={`more-destinations-item ${destination.class}`}
             key={index}
           >
-            <img src={france} className="more-destinations-item__img" alt="" />
+            <Link to="/HomeBooking">
+              <img
+                src={destination.thumbnail}
+                className="more-destinations-item__img"
+                alt=""
+              />
+            </Link>
             <div className="more-destinations-info">
-              <h3 className="more-destinations-state">{destination.state}</h3>
-              <p className="more-destinations-city">{destination.city}</p>
+              <h3 className="more-destinations-state">{destination.name}</h3>
             </div>
           </div>
         ))}

@@ -1,31 +1,12 @@
 import React from "react";
 import styles from "./top-destinations.module.css";
-import imga from "../../assets/img/download.jpg";
+
 import classNames from "classnames/bind";
 import { Link } from "react-router-dom";
 
 const cx = classNames.bind(styles);
 
-const topDestinations = [
-  {
-    state: "Paraty",
-    city: "RIO DE JANEIRO",
-  },
-  {
-    state: "Morretes",
-    city: "PARANA",
-  },
-  {
-    state: "Olinda",
-    city: "PERNAMBUCO",
-  },
-  {
-    state: "Gramado",
-    city: "RIO GRANDE DO SUL",
-  },
-];
-
-function TopDestinations() {
+function TopDestinations({ handleData }) {
   return (
     <div className={cx("top-destinations")}>
       <div className={cx("top-destinations__content")}>
@@ -38,27 +19,21 @@ function TopDestinations() {
         </p>
       </div>
 
-      <div className={cx("top-destinations-container")}>
-        {topDestinations.map((destination, index) => (
+      <div id="id" className={cx("top-destinations-container")}>
+        {handleData.map((destination, index) => (
           <div className={cx("top-destinations-item")} key={index}>
             <div className={cx("front")}>
-              <Link
-                to="/HomeBooking#featured"
-                style={{ width: "100%", height: "100%" }}
-              >
+              <Link to="/HomeBooking" style={{ width: "100%", height: "100%" }}>
                 <img
-                  src={imga}
+                  src={destination.thumbnail}
                   className={cx("top-destinations-item__img")}
                   alt=""
                 />
               </Link>
               <div className={cx("top-destinations-info")}>
                 <h3 className={cx("top-destinations-state")}>
-                  {destination.state}
+                  {destination.name}
                 </h3>
-                <p className={cx("top-destinations-city")}>
-                  {destination.city}
-                </p>
               </div>
             </div>
             <div className={cx("back")}>hehe</div>

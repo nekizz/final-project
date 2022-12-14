@@ -3,20 +3,21 @@
         "id": "0001",
         "name": "L'Etape Gasconne",
         "address": "Place de la Mairie, 47800 Allemans-du-Dropt, France",
+        "class": "france",
         "prices": [
             {
                 "id": "1",
-                "name": "short",
+                "name": "Short period",
                 "price": "$1000"
             },
             {
                 "id": "2",
-                "name": "short",
+                "name": "Medium period",
                 "price": "$2000"
             },
             {
                 "id": "3",
-                "name": "short",
+                "name": "Long period",
                 "price": "$2500"
             }
         ],
@@ -28,37 +29,65 @@
             },
             {
                 "id": "1001",
+                "img": "https://cf.bstatic.com/xdata/images/hotel/max1024x768/310596687.jpg?k=4aadd27e94206405b1cac5056006dd7ea63e075e29077d3c8f199d333b2f6727&o=&hp=1"
+            },
+            {
+                "id": "1001",
+                "img": "https://cf.bstatic.com/xdata/images/hotel/max1024x768/310596687.jpg?k=4aadd27e94206405b1cac5056006dd7ea63e075e29077d3c8f199d333b2f6727&o=&hp=1"
+            },
+            {
+                "id": "1001",
+                "img": "https://cf.bstatic.com/xdata/images/hotel/max1024x768/310596687.jpg?k=4aadd27e94206405b1cac5056006dd7ea63e075e29077d3c8f199d333b2f6727&o=&hp=1"
+            },
+            {
+                "id": "1001",
                 "img": "https://cf.bstatic.com/xdata/images/hotel/max1280x900/79056174.jpg?k=c884b013101021e8ac09df7db863c1e938d957088f24cbb4bd13912a768f1df6&o=&hp=1"
             }
         ],
-        "detail-room": [
+        "rooms": [
+            {
+                "id": "1",
+                "name": "single"
+            },
+            {
+                "id": "2",
+                "name": "single"
+            },
+            {
+                "id": "3",
+                "name": "single"
+            }
+        ],
+        "detailRoom": [
             {
                 "id": "01",
                 "name": "bedroom",
-                "total": "3"
+                "total": "3",
+                "icon": "<BiBed />"
             },
             {
                 "id": "02",
                 "name": "bathroom",
-                "total": "2"
+                "total": "2",
+                "icon": "<BiBath />"
             },
             {
                 "id": "03",
-                "name": "transport",
-                "type": [
-                    {
-                        "car": "2",
-                        "bike": "3"
-                    }
-                ]
+                "name": "2 car / 3 bike",
+                "icon": "<AiOutlineCar />"
+            },
+            {
+                "id": "04",
+                "name": "Pet Allowed",
+                "icon": "<BiBed />"
             }
         ],
-        "pet": "Pets Allowed",
         "description": "Offering an outdoor swimming pool, a bar and a restaurant, L'Etape Gasconne is a hotel located in Allemans-du-Dropt. Free WiFi access is available. Each room here will provide you with air conditioning and a private bathroom with a bath or shower and free toiletries. Extras include a desk and ironing facilities.At L'Etape Gasconne you will find a garden and a terrace. Other facilities offered at the property include meeting facilities. Mérignac Airport is 50 mi away. Free public parking is available on site. Couples in particular like the location – they rated it 8.6 for a two-person trip.L'Etape Gasconne has been welcoming Booking.com guests since May 4, 2015"
     },
     {
         "id": "0002",
         "name": "Wierszyki Shelters",
+        "class": "iceland",
         "address": " Droga do Wantuli 10, 34-500 Zakopane, Poland",
         "prices": [
             {
@@ -88,34 +117,36 @@
                 "img": "https://cf.bstatic.com/xdata/images/hotel/max1280x900/280947647.jpg?k=82bca9093adf74a5cfc632264e96ac79d17f7a1f15eb09d4da844c0242026c06&o=&hp=1"
             }
         ],
-        "detail-room": [
+        "detailRoom": [
             {
                 "id": "01",
                 "name": "bedroom",
-                "total": "2"
+                "total": "3",
+                "icon": "<BiBed />"
             },
             {
                 "id": "02",
                 "name": "bathroom",
-                "total": "1"
+                "total": "2",
+                "icon": "<BiBath />"
             },
             {
                 "id": "03",
-                "name": "transport",
-                "type": [
-                    {
-                        "car": "1",
-                        "bike": "2"
-                    }
-                ]
+                "name": "2 car / 3 bike",
+                "icon": "<AiOutlineCar />"
+            },
+            {
+                "id": "04",
+                "name": "Pet Allowed",
+                "icon": "<BiBed />"
             }
         ],
-        "pet": "Pets Allowed",
         "description": "Located in Zakopane in the Małopolskie region and Tatra National Park reachable within 0.7 miles, Wierszyki Shelters has accommodations with free WiFi, a playground, a garden and free private parking. Each room here will provide you with air conditioning and a private bathroom with a bath or shower and free toiletries. Extras include a desk and ironing facilities.At L'Etape Gasconne you will find a garden and a terrace. Other facilities offered at the property include meeting facilities. Mérignac Airport is 50 mi away. Free public parking is available on site. Couples in particular like the location – they rated it 8.6 for a two-person trip.L'Etape Gasconne has been welcoming Booking.com guests since May 4, 2015"
     },
     {
         "id": "0003",
         "name": "Maison d'hôtes Aux Deux CigognesOpens",
+        "class": "norway",
         "address": " 1 Rue de Bischwiller, 67240 Gries, France ",
         "prices": [
             {
@@ -145,34 +176,36 @@
                 "img": "https://cf.bstatic.com/xdata/images/hotel/max1280x900/123412561.jpg?k=3684f34f4c4fe9dd1032a9108b52f72ed4c3bedebb427355ba8b1d3296ff8ab1&o=&hp=1"
             }
         ],
-        "detail-room": [
+        "detailRoom": [
             {
                 "id": "01",
                 "name": "bedroom",
-                "total": "3"
+                "total": "3",
+                "icon": "<BiBed />"
             },
             {
                 "id": "02",
                 "name": "bathroom",
-                "total": "2"
+                "total": "2",
+                "icon": "<BiBath />"
             },
             {
                 "id": "03",
-                "name": "transport",
-                "type": [
-                    {
-                        "car": "2",
-                        "bike": "3"
-                    }
-                ]
+                "name": "2 car / 3 bike",
+                "icon": "<AiOutlineCar />"
+            },
+            {
+                "id": "04",
+                "name": "Pet Allowed",
+                "icon": "<BiBed />"
             }
         ],
-        "pet": "Pets Allowed",
         "description": " Chambre d'hôtes aux Deux Cigognes is offering accommodations in Gries. Providing a dining room, the the property offers diner service at an extra cost. A terrace and a relaxation area are available in the property. Free WiFi is available. Free WiFi access is available. Each room here will provide you with air conditioning and a private bathroom with a bath or shower and free toiletries. Extras include a desk and ironing facilities.At L'Etape Gasconne you will find a garden and a terrace. Other facilities offered at the property include meeting facilities. Mérignac Airport is 50 mi away. Free public parking is available on site. Couples in particular like the location – they rated it 8.6 for a two-person trip.L'Etape Gasconne has been welcoming Booking.com guests since May 4, 2015"
     },
     {
         "id": "0004",
         "name": "Ranczo w Dolinie",
+        "class": "jamaica",
         "address": " Dąbrówka Kościelna 20, 62-280 Kiszkowo, Poland ",
         "prices": [
             {
@@ -202,29 +235,30 @@
                 "img": "https://www.booking.com/hotel/pl/ranczo-w-dolinie-kiszkowo.html?aid=304142&label=gen173nr-1FCAEoggI46AdIM1gEaPQBiAEBmAExuAEXyAEV2AEB6AEB-AECiAIBqAIDuAKMzbGcBsACAdICJGVmNzVhZDU5LTUwMzMtNDY3OC05ZTc4LTI3MmMyYTI1M2JiMtgCBeACAQ&ucfs=1&arphpl=1#"
             }
         ],
-        "detail-room": [
+        "detailRoom": [
             {
                 "id": "01",
                 "name": "bedroom",
-                "total": "3"
+                "total": "3",
+                "icon": "<BiBed />"
             },
             {
                 "id": "02",
                 "name": "bathroom",
-                "total": "2"
+                "total": "2",
+                "icon": "<BiBath />"
             },
             {
                 "id": "03",
-                "name": "transport",
-                "type": [
-                    {
-                        "car": "2",
-                        "bike": "3"
-                    }
-                ]
+                "name": "2 car / 3 bike",
+                "icon": "<AiOutlineCar />"
+            },
+            {
+                "id": "04",
+                "name": "Pet Allowed",
+                "icon": "<BiBed />"
             }
         ],
-        "pet": "Pets Allowed",
         "description": "Offering an outdoor swimming pool, a bar and a restaurant, L'Etape Gasconne is a hotel located in Allemans-du-Dropt. Free WiFi access is available. Each room here will provide you with air conditioning and a private bathroom with a bath or shower and free toiletries. Extras include a desk and ironing facilities.At L'Etape Gasconne you will find a garden and a terrace. Other facilities offered at the property include meeting facilities. Mérignac Airport is 50 mi away. Free public parking is available on site. Couples in particular like the location – they rated it 8.6 for a two-person trip.L'Etape Gasconne has been welcoming Booking.com guests since May 4, 2015"
     }
 ]

@@ -1,6 +1,6 @@
-@import url('http://fonts.cdnfonts.com/css/circular-std');
+/* @import url('http://fonts.cdnfonts.com/css/circular-std');
 @import url('http://fonts.cdnfonts.com/css/allison-script');
-
+ */
 
 :root {
     --white: #fff;
@@ -8,7 +8,8 @@
     --primary: #00a77f;
     --eoe2e6 :#E0E2E6;
     --secondBlack : #484848;
-    
+    --font-family: 'CircularStd';
+    --font-allision : "Allision_Script";
 }
 
 * {
@@ -19,6 +20,7 @@
 
 body {
     text-rendering: optimizeSpeed;
+    font-family: var(--font-family);
 }
 
 button,input,[tabindex] {
@@ -29,4 +31,14 @@ button,input,[tabindex] {
 a{
     color: #333;
     text-decoration: none;
+}
+
+@font-face {
+    font-family: var(--font-family);
+    src: url("../src/assets/Fonts/CircularStd-Black.woff");
+}
+
+@font-face {
+    font-family: "Allision_Script";
+    src: url("../src/assets/Fonts/Allison_Script.woff");
 }

@@ -1,0 +1,28 @@
+.side-section {
+    margin: 181px 80px;
+    padding: 61px 24px;
+    border-radius: 6px;
+    background-color: #eff0f2;
+}
+
+.information-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 10;
+    width: 50%;
+
+}
+
+.title {
+    font-size: 38px;
+    font-weight: 700;
+}
+
+.desc {
+    font-size: 15px;
+    font-weight: 500;
+    color: #9A9A9A;
+    margin-top: 15px;
+    margin-bottom: 30px;
+}

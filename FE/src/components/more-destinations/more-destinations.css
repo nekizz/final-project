@@ -1,6 +1,6 @@
 .more-destinations {
     position: relative;
-    background: #fff;
+    background: var(--white);
     /* padding-bottom: 100px; */
 }
 
@@ -17,21 +17,21 @@
     position: absolute;
     top: 90px;
     color: #0CA296;
-    font-family: "Allison Script";
+    font-family: var(--font-allision);
     font-weight: 400;
     font-size: 200px;
 
 }
 
 .more-destinations__dest {
-    color: #000;
+    color: var(--black);
     text-transform: lowercase;
     font-size: 80px;
-    font-family: "Circular Std";
+    font-family: var(--font-family);
 }
 
 .more-destinations__desc {
-    font-family: "Circular Std";
+    
     color: #565656;
     font-weight: 400;
     line-height: 32px;
@@ -66,6 +66,7 @@
     height: 100%;
     object-fit: cover;
     border-radius: 10px;
+    filter: brightness(80%);
 }
 
 
@@ -86,15 +87,8 @@
 
 
 .more-destinations-state {
-    color: #fff;
-    font-size: 30px;
-    font-family: "Circular Std";
+    color: var(--white);
+    font-size: 18px;
     text-align: center;
 }
 
-.more-destinations-city {
-    color: #fff;
-    font-size: 14px;
-    font-family: "Circular Std";
-    text-align: center;
-}

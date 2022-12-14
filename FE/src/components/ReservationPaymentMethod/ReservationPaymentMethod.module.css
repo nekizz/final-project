@@ -1,0 +1,119 @@
+/* .reservation-payment-method {
+    background-color: #eff0f2;
+} */
+
+.information {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 15px;
+}
+
+.col-2 {
+    display: flex;
+    width: 50%;
+    gap: 30px;
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--secondBlack);
+}
+
+.desc {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: right;
+    font-size: 16px;
+    font-weight: 500;
+    color: #9a9a9a;
+}
+
+.information-wrapper {
+    border: 1px solid var(--secondBlack);
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.information-top {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.avatar-container {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.avatar {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+}
+
+.information-container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin: 0 10px 10px 10px;
+}
+
+.header-desc {
+    font-size: 14px;
+    font-weight: 500;
+    color: #9a9a9a;
+}
+
+.howwouldyouliketopay {
+    font-size: 18px;
+    font-style: italic;
+    font-weight: 800;
+    line-height: 22px;
+    letter-spacing: 0em;
+    margin-top: 20px;
+    margin-left: 55px;
+}
+
+.checkbox-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 17px;
+}
+
+.input-wrapper {
+    width: 40%;
+}
+
+.credit-card {
+    text-align: right;
+}
+
+.label {
+    display: flex;
+    gap: 10px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.label {
+    margin: 10px 0px 10px 55px;
+}
+.label > input {
+    width: 40%;
+    height: 30px;
+    border-radius: 5px;
+    padding-left: 1%;
+}

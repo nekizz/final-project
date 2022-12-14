@@ -1,0 +1,62 @@
+.item-container {
+    display: flex;
+    justify-content: space-between;
+    height: 100px;
+
+}
+
+.col-left {
+    display: flex;
+    gap: 20px;
+    height: 100%;
+}
+
+.img-container {
+    width: 100px;
+    height: 100%;
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+}
+
+.item-information { 
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 100%;
+}
+
+.item-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: #484848
+}
+
+.item-specific {
+    display: flex;
+    gap: 40px;
+}
+
+.specific {
+    color: #484848;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.time {
+    color: #9a9a9a;
+    font-weight: 500;
+}
+
+.item-price {
+    font-size: 16px;
+    font-weight: 600;
+
+}
+
+.col-right {
+    display: flex;
+    align-items: center;
+}

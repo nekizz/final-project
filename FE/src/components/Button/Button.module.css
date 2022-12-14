@@ -1,0 +1,118 @@
+.wrapper {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    min-width: 100px;
+    padding: 9px 16px;
+    color: var(--white);
+    cursor: pointer;
+    background-color: var(--white);
+    border: 1px solid transparent;
+    user-select: none;
+}
+
+/* .wrapper:active {
+    background-color: var(--black);
+    color: var(--white);
+} */
+/* size */
+.small {
+
+}
+
+.medium {
+    padding: 17px 29px;
+    width: 172px;
+}
+
+.mediumx {
+    width: 250px;
+    padding: 17px 29px;
+
+}
+
+.large {
+    width: 318px;
+    padding: 22px 50px;
+    margin: 0 30px;
+}
+
+/* end size */
+
+/* color */
+
+.black {
+    background-color: var(--black);
+}
+
+.textRed {
+    color: #f75656;
+}
+
+.textBlack {
+    color: var(--black);
+}
+
+.backGroundWhite {
+    background-color: var(--white);
+}
+
+.primary {
+    background-color: var(--black);
+    width: 220px;
+    height: 60px;
+}
+
+.secondary {
+    background-color: var(--secondBlack);
+    width: 220px;
+    height: 60px;
+}
+
+.third {
+    background-color: var(--eoe2e6);
+    border-radius: 6px;
+    color: var(--secondBlack);
+
+}
+
+.fourth {
+    width: 40%;
+    background-color: #9a9a9a;
+    padding: 20px 0;
+    border-radius: 35px;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--white);
+}
+
+.icon + .title, .title + .icon {
+    margin-left: 8px;
+}
+
+.icon {
+    display: inline-block;
+    width: 20px;
+    text-align: center;
+}
+
+.rounded {
+    border-radius: 30px;
+}
+
+.transparent {
+    background-color: transparent;
+    color: var(--secondBlack);
+    font-size: 15px;
+    font-weight: 700;
+
+}
+
+
+.outline {
+    border: 1px solid var(--secondBlack);
+    border-radius: 6px;
+}
+
+

@@ -1,0 +1,39 @@
+.search-wrapper {
+    display: flex;
+}
+
+.colleft {
+    flex: 1;
+}
+
+.special {
+    color: var(--black);
+}
+
+.colright {
+    position: relative;
+}
+
+.square {
+    height: 160px;
+    width: 160px;
+    background-color: #e0e2e6;
+}
+
+.map-center__info {
+    display: flex;
+    width: 80%;
+    position: absolute;
+    top: 423px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+.search-result {
+    margin-bottom: 15px;
+    margin-left: 100px;
+}
+
+.box-shadow {
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}

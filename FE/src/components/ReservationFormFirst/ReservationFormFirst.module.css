@@ -1,0 +1,81 @@
+.reservation-form-first {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+}
+
+.add {
+    align-self: flex-end;
+    font-size: 14px;
+    font-style: italic;
+    font-weight: 600;
+    color: #363DDC;
+    background-color: #eff0f2;
+
+    
+}
+
+.reservation-item--container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+}
+
+.bill {
+    display: flex;
+}
+
+.col-3 {
+    flex: 1 1 0px;
+}
+
+.total-days {
+    display: flex;
+    gap: 5px;
+}
+
+.type-container {
+    display: flex;
+    gap: 50px;
+}
+
+.date {
+    display: flex;
+}
+
+.check {
+    width: 50%;
+    margin-right: 20px;
+}
+
+.label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fee {
+    display: flex;
+    gap: 15px;
+}
+
+.total-price {
+    position: relative;
+    margin-top: 15px;
+}
+
+.total-price::before {
+    position: absolute;
+    top: -5px;
+    content: "";
+    height: 1px;
+    width: 100%;
+    background-color: #000;
+}
+
+.custom-button {
+    align-self: flex-end;
+    margin-top: 20px;
+}

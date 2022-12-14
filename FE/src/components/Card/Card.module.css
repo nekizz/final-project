@@ -1,0 +1,199 @@
+.fragment {
+    position: relative;
+}
+
+.mb300 {
+    margin-bottom: 100px;
+}
+
+.link {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.card {
+    position: relative;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #e0e2e6;
+
+    /* overflow: hidden; */
+    height: 340px;
+    width: 279px;
+    border-radius: 8px;
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+
+}
+
+.card-container {
+    position: absolute;
+    bottom: -2px;
+    margin-left: 0;
+    width: 100%;
+    height: 67px;
+}
+
+.featured {
+    width: 100%;
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+    
+}
+
+.height-160px {
+    background-color: #fff;
+    height: 160px;
+    width: 65%;
+    border-radius: 0;
+}
+
+.feature-container {
+    position: absolute;
+    bottom: -85px;
+    width: 100%;
+
+    /* margin-left: 21px; */
+}
+
+.feature-row {
+    background-color: #fff;
+    position: absolute;
+    right: 0;
+    height: 100%;
+    width: 97%;
+}
+
+.guide-container {
+    position: absolute;
+    bottom: -60px;
+    margin-left: 21px;
+}
+
+.feature-information {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    position: absolute;
+    bottom: 13px;
+}
+
+.price {
+    margin: 0 21px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #9a9a9a;
+}
+
+.circle-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin: 0 21px;
+}
+
+.circle {
+    background-color: var(--white);
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+}
+
+.feature-icons {
+    display: flex;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.icon-heart {
+    position: absolute;
+    right: 18px;
+    top: 22px;
+    font-size: 26px;
+    z-index: 1;
+}
+
+.icon-heart:hover {
+    color: red;
+}
+
+.card-avatar {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+
+.card-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--black);
+}
+
+.card-desc {
+    font-size: 13px;
+    color: var(--black);
+}
+
+.star-rated {
+    position: absolute;
+    top: 22px;
+    font-size: 14px;
+    left: 21px;
+}
+
+.wishlists {
+    background-color: #9a9a9a;
+    max-height: 300px;
+}
+
+.wishlists-container {
+    position: absolute;
+    bottom: 14px;
+    left: 24px;
+    color: #fff;
+}
+
+.wishlist-title {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.wishlist-desc {
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.close-icon {
+    position: absolute;
+    right: 17px;
+    top: 19px;
+    font-size: 15px;
+    color: #fff;
+    z-index: 1;
+}
+
+.add-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 70px;
+    color: #fff;
+}
+
+.background {
+    background-color: #fff;
+    width: 100%;
+    height: 100%;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    padding: 5px 10px;
+}

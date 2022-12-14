@@ -124,3 +124,7 @@
     width: 40%;
     padding: 10px 50px;
 }
+
+.disabled:disabled {
+    cursor: default;    
+}

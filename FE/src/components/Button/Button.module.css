@@ -12,10 +12,10 @@
     user-select: none;
 }
 
-.wrapper:active {
+/* .wrapper:active {
     background-color: var(--black);
     color: var(--white);
-}
+} */
 /* size */
 .small {
 
@@ -44,6 +44,18 @@
 
 .black {
     background-color: var(--black);
+}
+
+.textRed {
+    color: #f75656;
+}
+
+.textBlack {
+    color: var(--black);
+}
+
+.backGroundWhite {
+    background-color: var(--white);
 }
 
 .primary {
@@ -103,10 +115,4 @@
     border-radius: 6px;
 }
 
-.textBlack {
-    color: var(--black);
-}
 
-.backGroundWhite {
-    background-color: var(--white);
-}

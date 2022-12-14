@@ -7,7 +7,6 @@ const cx = classNames.bind(styles);
 function Button({
   to,
   href,
-  onClick,
   children,
   small = false,
   medium = false,
@@ -20,15 +19,16 @@ function Button({
   rounded = false,
   transparent = false,
   black = false,
+  textRed = false,
   outline = false,
   textBlack = false,
   backGroundWhite = false,
   leftIcon,
   rightIcon,
   className,
+  ...props
 }) {
   let Comp = "button";
-  const props = { onClick };
 
   if (to) {
     props.to = to;
@@ -52,6 +52,7 @@ function Button({
     outline,
     textBlack,
     backGroundWhite,
+    textRed,
     [className]: className,
   });
 

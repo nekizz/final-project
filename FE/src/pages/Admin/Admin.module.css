@@ -7,12 +7,12 @@
     nav {
         padding: 15px 10px;
     }
-
     aside {
         align-self: start;
     }
     main {
         background-color: #cccccc;
+        height: 100vh;
     }
     .header {
         text-transform: capitalize;
@@ -20,18 +20,24 @@
     }
     .table-container {
         display: flex !important ;
-        justify-content: center !important;
+        justify-content: center;
     }
     table {
         width: 95%;
         background-color: white;
+        font-family: Mulish; /* install --- npm install @fontsource/mulish */
+        border-collapse: collapse;
     }
     th,
     td {
         border-bottom: 1px solid #ddd;
         padding: 18px;
+        text-align: left;
     }
     th {
         color: #9fa2b4;
+    }
+    .customer:hover {
+        background-color: #c5c1c1;
     }
 }

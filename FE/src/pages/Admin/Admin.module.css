@@ -1,3 +1,6 @@
+* {
+    font-family: Mulish; /* install --- npm install @fontsource/mulish */
+}
 @media (min-width: 800px) {
     .wrapper {
         display: grid;
@@ -7,11 +10,15 @@
     nav {
         padding: 15px 10px;
     }
+    h1 {
+        font-size: 24px;
+        font-weight: bold;
+    }
     aside {
         align-self: start;
     }
     main {
-        background-color: #cccccc;
+        background-color: #e7e9eb;
         height: 100vh;
     }
     .header {
@@ -25,7 +32,6 @@
     table {
         width: 95%;
         background-color: white;
-        font-family: Mulish; /* install --- npm install @fontsource/mulish */
         border-collapse: collapse;
     }
     th,
@@ -36,8 +42,33 @@
     }
     th {
         color: #9fa2b4;
+        font-weight: bold;
+        font-size: 16px;
+    }
+    td {
+        font-size: 14px;
     }
     .customer:hover {
-        background-color: #c5c1c1;
+        background-color: #8394fc;
+    }
+    .sub_infor {
+        color: #c5c7cd;
+        font-size: 12px;
+    }
+    .sub_nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12px;
+        color: #9fa2b4;
+        background-color: white;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+    }
+    .icon {
+        height: 1.5em;
+        width: 1.5em;
+        padding: 3px;
+        margin-right: 7px;
     }
 }

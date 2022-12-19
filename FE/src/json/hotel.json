@@ -47,15 +47,21 @@
         "rooms": [
             {
                 "id": "1",
-                "name": "single"
+                "address": "Place de la Mairie, 47800 Allemans-du-Dropt, France",
+                "thumbnail": "https://cf.bstatic.com/xdata/images/hotel/square600/46129592.webp?k=e23728804b1c260cf7c6e8cbc1ee4f917508f462ad3e3839f91a4138b9b2c686&o=&s=1",
+                "name": "L'Etape Gasconne"
             },
             {
                 "id": "2",
-                "name": "single"
+                "address": "Place de la Mairie, 47800 Allemans-du-Dropt, France",
+                "thumbnail": "https://cf.bstatic.com/xdata/images/hotel/square600/46129592.webp?k=e23728804b1c260cf7c6e8cbc1ee4f917508f462ad3e3839f91a4138b9b2c686&o=&s=1",
+                "name": "L'Etape Gasconne"
             },
             {
                 "id": "3",
-                "name": "single"
+                "address": "Place de la Mairie, 47800 Allemans-du-Dropt, France",
+                "thumbnail": "https://cf.bstatic.com/xdata/images/hotel/square600/46129592.webp?k=e23728804b1c260cf7c6e8cbc1ee4f917508f462ad3e3839f91a4138b9b2c686&o=&s=1",
+                "name": "L'Etape Gasconne"
             }
         ],
         "detailRoom": [

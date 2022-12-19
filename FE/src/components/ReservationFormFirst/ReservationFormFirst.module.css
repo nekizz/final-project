@@ -5,6 +5,24 @@
     gap: 10px;
 }
 
+.reservation-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.rooms-list {
+    list-style-type: none;
+    flex: 1;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.room-list-item {
+    display: inline-block;
+}
+
 .add {
     align-self: flex-end;
     font-size: 14px;

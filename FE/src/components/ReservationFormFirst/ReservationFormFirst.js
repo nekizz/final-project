@@ -14,12 +14,14 @@ function ReservationFormFirst({ handleSetCheckBill }) {
 
     return storageData ?? [];
   });
-  const [rooms, setRooms] = useState(() => {
+
+  const [room, setRooms] = useState(() => {
     const storageRoomsData = JSON.parse(localStorage.getItem("rooms"));
 
     return storageRoomsData ?? [];
   });
   const [total, setTotal] = useState(1);
+  const [showRoomStyle, setShowRoomStyle] = useState(false);
   const [startDate, setStartDate] = useState(new Date());
   const [endDate, setEndDate] = useState(new Date());
   const handleIncrease = () => {
@@ -30,23 +32,68 @@ function ReservationFormFirst({ handleSetCheckBill }) {
     total > 1 && setTotal((prev) => prev - 1);
   };
 
-  const removeItem = (id) => {
-    if (items.length > 0) {
-      const newItems = items.filter((item) => item.id !== id);
+  // if (items.length > 0 && room.length == 0) {
+  //   const data = JSON.stringify(items[0].rooms);
+  //   localStorage.setItem("rooms", data);
+  // }
+  // console.log(room);
 
-      setItems(() => {
+  const removeItem = (id) => {
+    if (room.length > 0) {
+      const newItems = room.filter((item) => item.id !== id);
+
+      setRooms(() => {
         const jsonData = JSON.stringify(newItems);
-        localStorage.setItem("reservationItem", jsonData);
+        localStorage.setItem("rooms", jsonData);
         return newItems;
       });
     }
   };
 
   const addItem = () => {
+    // let id = 1;
+    // if (room.length > 0 && items.length > 0) {
+    //   id = room[room.length - 1].id + 1;
+    // }
+
+    // if (items.length > 0) {
+    //   setRooms((prev) => {
+    //     const newData = [
+    //       ...prev,
+    //       {
+    //         id: id,
+    //         name: "hieu",
+    //         address: "doanxem",
+    //         thumbnail:
+    //           "https://cf.bstatic.com/xdata/images/hotel/square600/46129592.webp?k=e23728804b1c260cf7c6e8cbc1ee4f917508f462ad3e3839f91a4138b9b2c686&o=&s=1",
+    //       },
+    //     ];
+    //     const jsonNewData = JSON.stringify(newData);
+    //     localStorage.setItem("rooms", jsonNewData);
+    //     return newData;
+    //   });
+    // }
+    setShowRoomStyle(!showRoomStyle);
+  };
+
+  const addItem1 = () => {
+    let id = 1;
+    if (room.length > 0 && items.length > 0) {
+      id = room[room.length - 1].id + 1;
+    }
+
     if (items.length > 0) {
-      console.log(items[0].rooms);
       setRooms((prev) => {
-        const newData = [...prev, items];
+        const newData = [
+          ...prev,
+          {
+            id: id,
+            name: "single",
+            address: "doanxem",
+            thumbnail:
+              "https://cf.bstatic.com/xdata/images/hotel/square600/46129592.webp?k=e23728804b1c260cf7c6e8cbc1ee4f917508f462ad3e3839f91a4138b9b2c686&o=&s=1",
+          },
+        ];
         const jsonNewData = JSON.stringify(newData);
         localStorage.setItem("rooms", jsonNewData);
         return newData;
@@ -56,12 +103,23 @@ function ReservationFormFirst({ handleSetCheckBill }) {
 
   return (
     <div className={cx("reservation-form-first")}>
-      <Button className={cx("add")} medium onClick={addItem}>
-        Add Room
-      </Button>
+      <div className={cx("reservation-top")}>
+        {showRoomStyle && (
+          <ul className={cx("rooms-list")}>
+            <li className={cx("room-list-item")} onClick={addItem1}>
+              single
+            </li>
+            <li className={cx("room-list-item")}>2</li>
+            <li className={cx("room-list-item")}>3</li>
+          </ul>
+        )}
+        <Button className={cx("add")} medium onClick={addItem}>
+          Add Room
+        </Button>
+      </div>
       <div className={cx("reservation-item--container")}>
-        {items.length > 0 &&
-          items.map((item) => (
+        {room.length > 0 &&
+          room.map((item) => (
             <ReservationItem
               id={item.id}
               key={item.id}

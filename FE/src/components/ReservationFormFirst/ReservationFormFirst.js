@@ -101,6 +101,56 @@ function ReservationFormFirst({ handleSetCheckBill }) {
     }
   };
 
+  const addItem2 = () => {
+    let id = 1;
+    if (room.length > 0 && items.length > 0) {
+      id = room[room.length - 1].id + 1;
+    }
+
+    if (items.length > 0) {
+      setRooms((prev) => {
+        const newData = [
+          ...prev,
+          {
+            id: id,
+            name: "double",
+            address: "doanxem",
+            thumbnail:
+              "https://cf.bstatic.com/xdata/images/hotel/square600/46129592.webp?k=e23728804b1c260cf7c6e8cbc1ee4f917508f462ad3e3839f91a4138b9b2c686&o=&s=1",
+          },
+        ];
+        const jsonNewData = JSON.stringify(newData);
+        localStorage.setItem("rooms", jsonNewData);
+        return newData;
+      });
+    }
+  };
+
+  const addItem3 = () => {
+    let id = 1;
+    if (room.length > 0 && items.length > 0) {
+      id = room[room.length - 1].id + 1;
+    }
+
+    if (items.length > 0) {
+      setRooms((prev) => {
+        const newData = [
+          ...prev,
+          {
+            id: id,
+            name: "triple",
+            address: "doanxem",
+            thumbnail:
+              "https://cf.bstatic.com/xdata/images/hotel/square600/46129592.webp?k=e23728804b1c260cf7c6e8cbc1ee4f917508f462ad3e3839f91a4138b9b2c686&o=&s=1",
+          },
+        ];
+        const jsonNewData = JSON.stringify(newData);
+        localStorage.setItem("rooms", jsonNewData);
+        return newData;
+      });
+    }
+  };
+
   return (
     <div className={cx("reservation-form-first")}>
       <div className={cx("reservation-top")}>
@@ -109,8 +159,12 @@ function ReservationFormFirst({ handleSetCheckBill }) {
             <li className={cx("room-list-item")} onClick={addItem1}>
               single
             </li>
-            <li className={cx("room-list-item")}>2</li>
-            <li className={cx("room-list-item")}>3</li>
+            <li className={cx("room-list-item")} onClick={addItem2}>
+              double
+            </li>
+            <li className={cx("room-list-item")} onClick={addItem3}>
+              triple
+            </li>
           </ul>
         )}
         <Button className={cx("add")} medium onClick={addItem}>

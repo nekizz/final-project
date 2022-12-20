@@ -6,7 +6,6 @@ import (
 )
 
 func main() {
-
 	from := "drminhvipoi2@gmail.com"
 	password := "minhminh123"
 

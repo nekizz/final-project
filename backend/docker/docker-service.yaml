@@ -2,38 +2,6 @@ version: '3.5'
 
 services:
 
-  # Infrastructure services
-  mysql:
-    image: mysql:latest
-    restart: always
-    cap_add:
-      - ALL  # CAP_SYS_NICE
-    volumes:
-      - ./mysql/data:/var/lib/mysql
-    environment:
-      - MYSQL_DATABASE=go
-      - MYSQL_PASSWORD=root
-      - MYSQL_ROOT_PASSWORD=root
-    ports:
-      - '3306:3306'
-    hostname: mysql
-    container_name: mysql
-    networks:
-      - go
-
-  #phpadmin
-  phpmyadmin:
-    image: phpmyadmin/phpmyadmin
-    environment:
-      - PMA_HOST=mysql
-      - PMA_USER=root
-      - PMA_PASSWORD=root
-      - MYSQL_ROOT_PASSWORD=root
-    ports:
-      - '8080:80'
-    networks:
-      - go
-
   nginx:
     image: nginx:latest
     restart: always
@@ -99,11 +67,11 @@ services:
     command: go-user-service serve grpc
     environment:
       - BACKEND=go-user-grpc:1417
-      - MYSQLDSN=root:root@tcp(127.0.0.1:3306)/go?charset=utf8mb4&parseTime=True&loc=Local
+      - MYSQLDSN=0866444202:dbhuan@tcp(127.0.0.1:3306)/minhnq?charset=utf8mb4&parseTime=True&loc=Local
     ports:
       - '1417:9090'
     depends_on:
-      - "mysql"
+      - "nginx"
     hostname: go-user-grpc
     container_name: go-user-grpc
     networks:

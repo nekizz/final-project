@@ -258,8 +258,6 @@ services:
       - MYSQLDSN=root:root@tcp(127.0.0.1:3306)/go?charset=utf8mb4&parseTime=True&loc=Local
     ports:
       - '1417:9090'
-    depends_on:
-      - "mysql"
     hostname: go-user-grpc
     container_name: go-user-grpc
     networks:
